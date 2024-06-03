@@ -1,0 +1,1105 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Evan Goddard - Professional Experience</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Img Viewer -->
+			<div class="imgViewer">
+				<img class="imgViewerImage" src=""></img>
+				<!--canvas class="imgViewerCanvas"></canvas-->
+				<button class="closeImgViewerBtn">x</button>
+			</div>
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">EVAN GODDARD</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li class="active"><a href="professionalexperience.html">Professional Experience</a></li>
+							<li><a href="personalexperience.html">Personal Experience</a></li>
+							<li><a href="aboutme.html">About Me</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/evan-goddard-734448180/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://www.facebook.com/evan.goddard.9/" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.instagram.com/evan_m_goddard/"  target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main" class="maxWidth">
+
+						<div>
+							<p>Information listed in this page is for demonstration purposes only and does not contain any harmful information.</p>
+						</div>
+
+						<div id="professionalContent">
+							<h2>WinForms</h2>
+							<ul class="timeline">
+								<li class="event" data-is-expanded="0">
+									
+										<div>
+											<h1 class='member-title'>Build Sheet Tool (Version 1)</h1>
+											<div class="sub-title">
+												<img src="images/WinForms Apps/Build Sheet Tool (Version 1)/icon.ico"></img>
+												<p>C# - Solo Development</p>
+											</div>
+										</div>
+										<div class="member-content">
+											<svg class="timelineMarker">
+												<polygon points="0,0 20,0 30,10 0,10" class="timelineMarker"></polygon>
+											</svg>
+											<div>
+												<p class="left">This is the first large project I had ever done with WinForms and Microsoft Access. This application allows a user to create customizable products based on a configurable list of items and options. 
+													It was created to be used as a frontend order intake tool for salesmen where they could generate organized, quality Estimates for customers and accurate, formatted Build Sheets for the whole company to use.<br/>
+												</p>
+												<h3 class="featureListHeader">Feature List</h3>
+												<ul>
+													<li>Configurable Items
+														<ul>
+															<li>Items and options (and rules) are configured via a separate application for quality control (Product Configurator)</li>
+														</ul>
+													</li>
+													<li>Revision Control
+														<ul>
+															<li>Users are able to view previous versions of the customized product in the application itself</li>
+														</ul>
+													</li>
+													<li>Reference Pictures
+														<ul>
+															<li>Each picture appears on the build sheet with its own editable description and can be in reference to multiple items</li>
+														</ul>
+													</li>
+													<li>Generate High Quality Documents
+														<ul>
+															<li>These documents also show when an item is custom, has an additional description, has a reference picture, or was previously a different value (revision control)</li>
+															<li><p class="pNormal">See an example estimate here: <a class="aOrangeLink" target="_blank" href="pdfs/Example Estimate from Build Sheet Tool.pdf">Estimate</a></p></li>
+															<li><p class="pNormal">See an example build sheet here: <a class="aOrangeLink" target="_blank" href="pdfs/Example Build Sheet from Build Sheet Tool.pdf">Build Sheet</a></p></li>
+														</ul>
+													</li>
+													<li>Rule Based Configurator (NOT IMPLEMENTED)
+														<ul>
+															<li>This is currently reading from a source that has configurable rules. Unfortunately, I was pulled away from this project before I could fully implement the rules into the application</li>
+														</ul>
+													</li>
+												</ul>
+
+												<div class="pictureViewer" data-selectedindex="0">
+													<!-- doing this because no 'data' attributes are working for me -->
+													<div class="dataDiv">0</div>
+													<h2 class="pictureTitle"></h2>
+													<div class="pictureHolder">
+														<button class="pictureNavBtn leftZero">&lt;</button>
+														
+														<div class="viewerPicture">
+															<div class="dataTitle">Main Screen</div>
+															<img src="images/WinForms Apps/Build Sheet Tool (Version 1)/pic1.png"></img>
+															<div class="dataDescription">There are three main tabs: Pending Orders, Orders In Progress, and Archive. Archive is currently selected. If there are any orders open, there will be an 'Open Orders' tab to the right of the 'Archive' tab.</div>
+														</div>
+														<div class="viewerPicture">
+															<div class="dataTitle">Order Editor (1 of 2)</div>
+															<img src="images/WinForms Apps/Build Sheet Tool (Version 1)/pic2.png"></img>
+															<div class="dataDescription">This is the opening view of an order. At the bottom, there are varying controls based on the order's status. Since this is a completed and archived order, there are no buttons.<br/><br/>
+																There are two main sections: Sales Information and Box Builder (data shown is for example use only). From this screen, you can open up the generated Estimate or Build Sheet, edit data, add pictures, view previous revisions, 
+																and pop the order in and out of the main application for side-by-side order viewing / editing. The 'Sales Information' section is collapsible since most of the viewing / editing is done in the 'Box Builder' section. </div>
+														</div>
+														<div class="viewerPicture">
+															<div class="dataTitle">Order Editor (2 of 2)</div>
+															<img src="images/WinForms Apps/Build Sheet Tool (Version 1)/pic3.png"></img>
+															<div class="dataDescription">Each item has a list of values that it can be set to and each value has its own price. If an item can be custom, it will have a 'Custom' option in its list of values. If 'Custom' is selected, 
+																the user is able to change the price of the item and must enter the new custom value in the 'Description' field. <br/><br/>
+																When an item has a description set, it will be given a comment image on the Estimate and Build Sheet and have its description written out below the item and its value. However, if the item value is set to 'Custom', 
+																the comment image will be replaced by a wrench and the value of the item will be replaced by the description on the Estimate and Build Sheet.<br/><br/>
+																This image also displays the collapsed 'Sales Information' section and an expanded 'Pictures' menu. Each picture can be tied to multiple items (this shows on the Build Sheet) and has its own description. 
+																Added pictures will be placed on an appendix section in the Build Sheet.
+															</div>
+														</div>
+
+														<button class="pictureNavBtn rightZero">&gt;</button>
+													</div>
+													<p class="pictureDescription"></p>
+													<div class="divGraphicDivider"></div>
+												</div>
+
+											</div>
+										</div>
+									
+								</li>
+								<li class="event" data-is-expanded="0">
+									
+									<div>
+										<h1 class='member-title'>ECN and ECR Tool</h1>
+										<div class="sub-title">
+											<img src="images/WinForms Apps/ECN and ECR Tool/ecn-r_logo.ico"></img>
+											<p>C# - Solo Development</p>
+										</div>
+									</div>
+									<div class="member-content">
+										<svg class="timelineMarker">
+											<polygon points="0,0 20,0 30,10 0,10" class="timelineMarker"></polygon>
+										</svg>
+										<div>
+											<p class="left">This tool was requested by engineering for tracking "Engineering Change Notices" and recieving and responding to "Engineering Change Requests". Key employees from different departments would be able to 
+												sign off or reject ECN's from engineering. In addition, any employee could submit an ECR and recieve optional email updates on its status.<br/>
+											</p>
+											<h3 class="featureListHeader">Feature List</h3>
+											<ul>
+												<li>Automatic Email Updates
+													<ul>
+														<li>Recieve email updates notifying when action is required or on the status of ECN's or ECR's</li>
+													</ul>
+												</li>
+												<li>In-Depth Logging
+													<ul>
+														<li>Logs are created for each ECN that shows all the changes and updates relating to the ECN</li>
+													</ul>
+												</li>
+												<li>Revision Control
+													<ul>
+														<li>View previous revisions of ECN's</li>
+													</ul>
+												</li>
+												<li>SolidWorks Importing
+													<ul>
+														<li>Import BOM's directly from SolidWorks and select parts to add to an ECN</li>
+													</ul>
+												</li>
+												<li>Excel Exporting
+													<ul>
+														<li>Export ECN's or ECR's directly to Excel</li>
+													</ul>
+												</li>
+												<li>Customizable Approval / Reject Process
+													<ul>
+														<li>Only send the ECN to selected departments to keep other departments from seeing unneeded information</li>
+													</ul>
+												</li>
+												<li>Link ECR's directly to ECN's
+													<ul>
+														<li>Creators of ECR's can choose to opt into email updates and ECN's can be created directly from ECR's</li>
+													</ul>
+												</li>
+												<li>Application Tutorials and Help
+													<ul>
+														<li>View tutorials directly in the application at any time and contains application help documentation</li>
+													</ul>
+												</li>
+											</ul>
+
+											<div class="pictureViewer" data-selectedindex="0">
+												<!-- doing this because no 'data' attributes are working for me -->
+												<div class="dataDiv">0</div>
+												<h2 class="pictureTitle"></h2>
+												<div class="pictureHolder">
+													<button class="pictureNavBtn leftZero">&lt;</button>
+													
+													<div class="viewerPicture">
+														<div class="dataTitle">Main Screen</div>
+														<img src="images/WinForms Apps/ECN and ECR Tool/ecn_menu.png"></img>
+														<div class="dataDescription">There are three main tabs: ECN Menu, ECR Menu, and ECN Archive. ECN Menu is currently selected. <br/><br/>
+															Depending on the logged in user's department, more information is provided on the ECN Menu and ECR Menu tabs. Since no user is logged in, the only visible information is 'In Progress' ECN's and they will only be able to open them as 
+															read only.
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">Main Screen Tutorial</div>
+														<img src="images/WinForms Apps/ECN and ECR Tool/ecn_menu_tutorial01.png"></img>
+														<div class="dataDescription">This is an example of the tutorials that are baked into the application. <br/><br/>
+															Each tutorial page highlights specifics to make it easier to follow along. In addition, users can click on elements in the tutorial to go to the page explaining it.
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">ECN (Read Only)</div>
+														<img src="images/WinForms Apps/ECN and ECR Tool/ecn_main_view.png"></img>
+														<div class="dataDescription">The read only view of an ECN. Each ECN can contain multiple pages which can be nested to represent a part's BOM.
+															<br/><br/>A user can see any information they need about the ECN in read only. They can also view any previous revisions and the current progress of the ECN via the 'Approval Menu' at the bottom.
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">ECN Tree View</div>
+														<img src="images/WinForms Apps/ECN and ECR Tool/ecn_main_view_tree_editor.png"></img>
+														<div class="dataDescription">Pages in the ECN can be navigated using the 'ECN Page View' tree view on the left side of the screen. This tree view can be sorted and searched for specific information.<br/><br/>
+															By clicking the gear in the top right corner, the information displayed in the tree view can be edited and saved per user (priority) or per computer if no user is logged in.
+														</div>
+													</div>
+													<button class="pictureNavBtn rightZero">&gt;</button>
+												</div>
+												<p class="pictureDescription"></p>
+												<div class="divGraphicDivider"></div>
+											</div>
+											
+
+											<div class="pictureViewer" data-selectedindex="0">
+												<!-- doing this because no 'data' attributes are working for me -->
+												<div class="dataDiv">0</div>
+												<h2 class="pictureTitle"></h2>
+												<div class="pictureHolder">
+													<button class="pictureNavBtn leftZero">&lt;</button>
+													
+													<div class="viewerPicture">
+														<div class="dataTitle">ECN Walkthrough (1 of 4) - Menu</div>
+														<img src="images/WinForms Apps/ECN and ECR Tool/logged_in_ecn_main_view.png"></img>
+														<div class="dataDescription">Here's a short walkthrough on general usage / back and forth between users. First, we'll start out at the ECN menu logged in as a user belonging to the department 'Sales'. Now
+															that we are logged in, the ECN menu changes.<br/><br/>Since we do not belong to the 'Engineering' department, we only see the standard and 'Action Required' tables. Any ECN that currently requires action 
+															from the department of the logged in user will appear in the 'Action Required' table.
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">ECN Walkthrough (2 of 4) - Reviewer</div>
+														<img src="images/WinForms Apps/ECN and ECR Tool/user_ecn_action_required.png"></img>
+														<div class="dataDescription"><span>When reviewing an ECN, users need to review each page in the ECN and mark them at the bottom as one of the following:</span>
+															<ul>
+																<li>Checked (Green): Approved / no errors on the page</li>
+																<li>Indeterminate (Yellow): Reviewer has questions or concerns about the page</li>
+																<li>Unchecked (Red): Reviewer believes this page may have wrong information or requires an update / change</li>
+															</ul>
+															<span>When the reviewer marks a page as yellow or red, they must leave notes on the right side pull out menu. These notes will be made available to the originator stating the reason for their decision.<br/><br/>
+															Based off the reviewer's marks, they may either approve or reject the ECN. If they approve the ECN, the next department will recieve an email notification letting them know that their action is required. If 
+															they reject the ECN, it will go back to the originator where they can respond to the rejection. This walkthrough shows the rejection process.</span>
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">ECN Walkthrough (3 of 4) - Originator</div>
+														<img src="images/WinForms Apps/ECN and ECR Tool/originators_received_action_view.png"></img>
+														<div class="dataDescription"><span>This is the view the originator has when they've received a rejected ECN. Note the "Rejected" from Sales in the Approval Menu at the bottom. Each page has review comments from
+															the rejector which states their mark status at the top and their written notes below it.<br/><br/>
+															The originator has a few options:</span>
+															<ul>
+																<li>Re-Release: Make changes and increase the revision number of the ECN and start the approval process over</li>
+																<li>Obsolete: Cancels and archives the ECN where no further changes will be made</li>
+																<li>Reply: Message back the reviewer with additional information, clarification, or questions on their review
+																	<ul><li>The reviewer will then be able to approve or reject the ECN again, essentially continuing the approval process</li></ul>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">ECN Walkthrough (4 of 4) - Log</div>
+														<img src="images/WinForms Apps/ECN and ECR Tool/ecn_log.png"></img>
+														<div class="dataDescription">The log keeps track of each event in an ECN's life cycle. From any system update to user update, it even tracks the reviewer comments so they can be viewed at any time.
+														</div>
+													</div>
+
+													<button class="pictureNavBtn rightZero">&gt;</button>
+												</div>
+												<p class="pictureDescription"></p>
+												<div class="divGraphicDivider"></div>
+											</div>
+											
+											<div class="pictureViewer" data-selectedindex="0">
+												<!-- doing this because no 'data' attributes are working for me -->
+												<div class="dataDiv">0</div>
+												<h2 class="pictureTitle"></h2>
+												<div class="pictureHolder">
+													<button class="pictureNavBtn leftZero">&lt;</button>
+													
+													<div class="viewerPicture">
+														<div class="dataTitle">ECR Menu</div>
+														<img src="images/WinForms Apps/ECN and ECR Tool/ecr_menu.png"></img>
+														<div class="dataDescription">This is the main menu for Engineering Change Requests. Any user, even ones not logged in, can submit an ECR for engineering to view and either approve or reject. <br/><br/>
+															Users that submit ECR's can opt in to recieve automatic email updates from the ECR approval / rejection all the way to the end of a linked ECN's approval and rejection process.
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">ECN Walkthrough (2 of 4) - Reviewer</div>
+														<img src="images/WinForms Apps/ECN and ECR Tool/user_ecn_action_required.png"></img>
+														<div class="dataDescription"><span>When reviewing an ECN, users need to review each page in the ECN and mark them at the bottom as one of the following:</span>
+															<ul>
+																<li>Checked (Green): Approved / no errors on the page</li>
+																<li>Indeterminate (Yellow): Reviewer has questions or concerns about the page</li>
+																<li>Unchecked (Red): Reviewer believes this page may have wrong information or requires an update / change</li>
+															</ul>
+															<span>When the reviewer marks a page as yellow or red, they must leave notes on the right side pull out menu. These notes will be made available to the originator stating the reason for their decision.<br/><br/>
+															Based off the reviewer's marks, they may either approve or reject the ECN. If they approve the ECN, the next department will recieve an email notification letting them know that their action is required. If 
+															they reject the ECN, it will go back to the originator where they can respond to the rejection. This walkthrough shows the rejection process.</span>
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">ECN Walkthrough (3 of 4) - Originator</div>
+														<img src="images/WinForms Apps/ECN and ECR Tool/originators_received_action_view.png"></img>
+														<div class="dataDescription"><span>This is the view the originator has when they've received a rejected ECN. Note the "Rejected" from Sales in the Approval Menu at the bottom. Each page has review comments from
+															the rejector which states their mark status at the top and their written notes below it.<br/><br/>
+															The originator has a few options:</span>
+															<ul>
+																<li>Re-Release: Make changes and increase the revision number of the ECN and start the approval process over</li>
+																<li>Obsolete: Cancels and archives the ECN where no further changes will be made</li>
+																<li>Reply: Message back the reviewer with additional information, clarification, or questions on their review
+																	<ul><li>The reviewer will then be able to approve or reject the ECN again, essentially continuing the approval process</li></ul>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">ECN Walkthrough (4 of 4) - Log</div>
+														<img src="images/WinForms Apps/ECN and ECR Tool/ecn_log.png"></img>
+														<div class="dataDescription">The log keeps track of each event in an ECN's life cycle. From any system update to user update, it even tracks the reviewer comments so they can be viewed at any time.
+														</div>
+													</div>
+
+													<button class="pictureNavBtn rightZero">&gt;</button>
+												</div>
+												<p class="pictureDescription"></p>
+												<div class="divGraphicDivider"></div>
+											</div>
+
+										</div>
+									</div>
+								</li>
+							</ul>
+
+							<h2>Windows Presentation Foundation (WPF)</h2>
+							<ul class="timeline">
+								<li class="event" data-is-expanded="0">
+									
+									<div>
+										<h1 class='member-title'>Kanban Card Manager</h1>
+										<div class="sub-title">
+											<img src="images/WPF Apps/Kanban Card Manager/kanban_manager_icon.png"></img>
+											<p>C# - 90% Solo Development - Prism Framework</p>
+										</div>
+									</div>
+									<div class="member-content">
+										<svg class="timelineMarker">
+											<polygon points="0,0 20,0 30,10 0,10" class="timelineMarker"></polygon>
+										</svg>
+										<div>
+											<p class="left">This application is quite simple and my first attempt at using Windows Presentation Foundation (WPF) and Prism. Naturally, I had to brute force my way through a lot at first, but once I got through the 
+												initial learning, I really enjoyed building this program in WPF! It very quickly won me over and it was much more intuitive for me to use than WinForms. <br/><br/>
+												Another request from Engineering, the Kanban Manager Tool was designed to create clean and useful Kanban cards to be used throughout the shop. Kanban cards are a form of inventory management and once 
+												a part goes below its re-order point, employees can drop off the Kanban card at the Purchasing department where it can be re-stocked and the Kanban card returned.<br/><br/>
+												I developed the most of the backend and frontend of this application. Once I was finished and working on another project, one of the engineers tweaked it slightly to allow for varying colors based on the 
+												part's re-order type and gave the cards a change in appearance. There were plans to connect this directly to our inventory management software, but we were never given the opportunity to do so.
+											</p>
+											<h3 class="featureListHeader">Feature List</h3>
+											<ul>
+												<li>Manage Kanban Cards
+													<ul>
+														<li>Create, print, and manage Kanban cards all in one place</li>
+													</ul>
+												</li>
+												<li>Barcodes
+													<ul>
+														<li>Each Kanban card has a automatically generated barcode</li>
+													</ul>
+												</li>
+											</ul>
+
+											<div class="pictureViewer" data-selectedindex="0">
+												<!-- doing this because no 'data' attributes are working for me -->
+												<div class="dataDiv">0</div>
+												<h2 class="pictureTitle"></h2>
+												<div class="pictureHolder">
+													<button class="pictureNavBtn leftZero">&lt;</button>
+													
+													<div class="viewerPicture">
+														<div class="dataTitle">Card Creator</div>
+														<img src="images/WPF Apps/Kanban Card Manager/card_creator.png"></img>
+														<div class="dataDescription">Users can add their own pictures to each Kanban Card and barcodes are generated on the left side of the card. A "Re-Order Point Calculator" is provided on the right for easily calculating the re-order point.</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">Created Cards Menu (1 of 2)</div>
+														<img src="images/WPF Apps/Kanban Card Manager/created_cards_menu_01.png"></img>
+														<div class="dataDescription">Here is where users can see all the Kanban cards that have been created. From here, users can edit existing cards.<br/><br/>
+															The shown Kanban card is blue because it's re-order type is "WORK ORDER".</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">Created Cards Menu (2 of 2)</div>
+														<img src="images/WPF Apps/Kanban Card Manager/created_cards_menu_01.png"></img>
+														<div class="dataDescription">The shown Kanban card is yellow because it's re-order type is "PURCHASE ORDER".
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">Print Cards</div>
+														<img src="images/WPF Apps/Kanban Card Manager/print_cards.png"></img>
+														<div class="dataDescription">From here, cards on the left can be added to a print preview on the right side of the screen. Users can right click on cards in the print preview to remove cards and cards after the removed card will be moved to 
+															fill its space. Only Letter (8.5 x 11 inches) sized paper is supported
+														</div>
+													</div>
+
+													<button class="pictureNavBtn rightZero">&gt;</button>
+												</div>
+												<p class="pictureDescription"></p>
+												<div class="divGraphicDivider"></div>
+											</div>
+
+										</div>
+									</div>
+								
+								</li>
+
+								<li class="event" data-is-expanded="0">
+									
+									<div>
+										<h1 class='member-title'>Product Configurator</h1>
+										<div class="sub-title">
+											<img src="images/WPF Apps/Product Configurator/product_configurator_icon.ico"></img>
+											<p>C# - Solo Development - Prism Framework</p>
+										</div>
+									</div>
+									<div class="member-content">
+										<svg class="timelineMarker">
+											<polygon points="0,0 20,0 30,10 0,10" class="timelineMarker"></polygon>
+										</svg>
+										<div>
+											<p class="left">In this project I really focused on MVVM and creating a loosely coupled application using Prism. The purpose of this application was to create a way to populate the possible products of the 
+												Build Sheet Tool. Before this, I was using a large Excel spreadsheet and reading from that to get all the information for the Build Sheet Tool. This came with its own various problems and performance issues.<br/><br/>
+												Now, each product's information is stored using JSON so that it can be quickly read by any application. Other information, such as who has a style checked out, is stored in an Access Database. By moving away from 
+												the Excel spreadsheet, I was able to modify the Build Sheet Tool to allow for retrieving previous product version information. For example, if version 2 is more expensive and the customer has already signed 
+												for version 1, you'd want to sell them what they signed for.
+											</p>
+											<h3 class="featureListHeader">Feature List</h3>
+											<ul>
+												<li>Create Customizable Products
+													<ul>
+														<li>Edit the items, item categories, options, and even rules of any product</li>
+													</ul>
+												</li>
+												<li>Version Control
+													<ul>
+														<li>Substantial changes can be saved as increased versions of a product</li>
+													</ul>
+												</li>
+												<li>Color Coded Categories
+													<ul>
+														<li>Each category can be color coded and appear as that color on the Build Sheet Tool's generated Build Sheet</li>
+													</ul>
+												</li>
+												<li>Check-In / Check-Out Products
+													<ul>
+														<li>In order to edit a product, users must check-out the product which will lock it from being edited by another user</li>
+													</ul>
+												</li>
+												<li>Item, Option, and Rule Creation Wizard
+													<ul>
+														<li>Follow through a simplified wizard when creating items, options, and rules</li>
+													</ul>
+												</li>
+												<li>Rule Outputs
+													<ul>
+														<li>Rules are easy to understand with the "output" section, which will break down the rule into a color coded sentence</li>
+													</ul>
+												</li>
+											</ul>
+
+											<div class="pictureViewer" data-selectedindex="0">
+												<!-- doing this because no 'data' attributes are working for me -->
+												<div class="dataDiv">0</div>
+												<h2 class="pictureTitle"></h2>
+												<div class="pictureHolder">
+													<button class="pictureNavBtn leftZero">&lt;</button>
+													
+													<div class="viewerPicture">
+														<div class="dataTitle">Style Explorer</div>
+														<img src="images/WPF Apps/Product Configurator/style_explorer.png"></img>
+														<div class="dataDescription"><span>The start screen of the application. I tried to make this application feel like a simple Microsoft application so users might feel a bit more familiar with it.
+															<br/><br/>On this screen, users can do the following:</span>
+															<ul>
+																<li>Create new styles</li>
+																<li>View or edit existing styles</li>
+																<li>Obsolete existing styles or restore obsoleted style</li>
+															</ul>
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">Views (1 of 3) - Items</div>
+														<img src="images/WPF Apps/Product Configurator/style_items_view.png"></img>
+														<div class="dataDescription">
+															<span>The items of a style are essentially the top level 'identifiers' of their options. For example, if the potential options of an item were "Red" and "Blue", the item name could be "Color".
+																On the build sheet, this would be read as "Color: Red" or "Color: Blue".<br/><br/>
+																In this view, the user can see each item on the left side. When clicking on an item, the options for that item appear in the upper right corner, and clicking on an options shows the rules for 
+																that option in the bottom right corner. The header for each table and the selected row changes color based which one was last clicked. This changes what will be affected by the "Selection" 
+																controls in the top left of the ribbon. Users can also right click on sections to bring up a context menu that has the same options as the "Selection" controls.<br/><br/>
+																Each style has three different views (Item > Options > Rules) that can be navigated to via the buttons on the bottom left:</span>
+															<ul>
+																<li>Items</li>
+																<li>Options</li>
+																<li>Rules</li>
+															</ul>
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">Views (2 of 3) - Options</div>
+														<img src="images/WPF Apps/Product Configurator/item_options_view.png"></img>
+														<div class="dataDescription"><span>Options define an item's value and price. There can be multiple options in an item, but only one option may be selected. Selected options show their rules on the 
+															right side of the screen.<br/><br/>
+															Each style has three different views (Item > Options > Rules) that can be navigated to via the buttons on the bottom left:</span>
+															<ul>
+																<li>Items</li>
+																<li>Options</li>
+																<li>Rules</li>
+															</ul>
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">Views (3 of 3) - Options</div>
+														<img src="images/WPF Apps/Product Configurator/option_rules_view.png"></img>
+														<div class="dataDescription"><span>Rules allow for the blocking or automatic setting of options. When someone is filling out an order on the Build Sheet Tool, these rules would stop them from 
+															using options that are not applicable with eachother.<br/><br/>
+															The "output" section of a rule states what the rule will accomplish in an easy to read format. The colored words are as follows:</span>
+															<ol>
+																<li>"Spreader Apron": the rule's item</li>
+																<li>"None": the set option of the rule's item</li>
+																<li>"Spreader Apron Side Plates": the item that this rule will affect</li>
+																<li>"is set to": the action this rule will perform</li>
+																<li>"None": the new set option of the item that this rule affects</li>
+															</ol>
+															<span><br/>Each style has three different views (Item > Options > Rules) that can be navigated to via the buttons on the bottom left:</span>
+															<ul>
+																<li>Items</li>
+																<li>Options</li>
+																<li>Rules</li>
+															</ul>
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">Visibility Ribbon Tab</div>
+														<img src="images/WPF Apps/Product Configurator/style_items_view_searching.png"></img>
+														<div class="dataDescription">The controls in this ribbon tab allow users to increase visibility on the different views. This picture shows the item category colors being shown in the category column 
+															of each item. It also shows items that have been found by the search criteria.<br/><br/>
+															Search criteria can be specific tables or all tables and as specific as which column to search. Objects that do not meet the search criteria can be greyed out (default) or hidden entirely.
+														</div>
+													</div>
+
+													<button class="pictureNavBtn rightZero">&gt;</button>
+												</div>
+												<p class="pictureDescription"></p>
+												<div class="divGraphicDivider"></div>
+											</div>
+
+											<div class="pictureViewer" data-selectedindex="0">
+												<!-- doing this because no 'data' attributes are working for me -->
+												<div class="dataDiv">0</div>
+												<h2 class="pictureTitle"></h2>
+												<div class="pictureHolder">
+													<button class="pictureNavBtn leftZero">&lt;</button>
+													
+													<div class="viewerPicture">
+														<div class="dataTitle">Style System Menu</div>
+														<img src="images/WPF Apps/Product Configurator/style_dropdown_menu.png"></img>
+														<div class="dataDescription">In the top left dropdown menu, users can quickly create new styles, open existing styles, or edit and check-in / check-out the open order.  By editing the style, users can 
+															change the categories available and quickly change the categories of existing items. 
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">Style Settings (1 of 2) - Copying Categories</div>
+														<img src="images/WPF Apps/Product Configurator/style_settings_copy_categories.png"></img>
+														<div class="dataDescription">The most important thing users can change in this menu are the categories. Each category has a name and color, their top-to-bottom order in the table will determine 
+															their order on the generated build sheet of the Build Sheet Tool.<br/><br/>Categories can be easily copied from another style by clicking the dropdown with the word "Copy" in it, this will 
+															show a table of all existing style and their categories. In the first column, the style's name is displayed, and in the second, the style's category names and colors are displayed. In order 
+															to copy, users must right click on the style in the dropdown, this is to discourage accidental copying.<br/><br/>Selecting a style to copy makes any categories in the current style equal the color of 
+															the copied categories of the same name. If the current style does not contain the name of a copied category, the copied category will be added onto the current style's categories.
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">Style Settings (1 of 2) - Editing Item Categories</div>
+														<img src="images/WPF Apps/Product Configurator/style_settings_editor.png"></img>
+														<div class="dataDescription">When a category is selected, all the items within that category are shown on the right. Users can then check items that they wish to move to different 
+															categories, then by selecting a category in the combobox and clicking the "Move To" button, the selected items will be moved to the selected category. The only other way to change an item's category 
+															would be to edit each individual item and change it.
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">Views (3 of 3) - Options</div>
+														<img src="images/WPF Apps/Product Configurator/option_rules_view.png"></img>
+														<div class="dataDescription"><span>Rules allow for the blocking or automatic setting of options. When someone is filling out an order on the Build Sheet Tool, these rules would stop them from 
+															using options that are not applicable with eachother.<br/><br/>
+															The "output" section of a rule states what the rule will accomplish in an easy to read format. The colored words are as follows:</span>
+															<ol>
+																<li>"Spreader Apron": the rule's item</li>
+																<li>"None": the set option of the rule's item</li>
+																<li>"Spreader Apron Side Plates": the item that this rule will affect</li>
+																<li>"is set to": the action this rule will perform</li>
+																<li>"None": the new set option of the item that this rule affects</li>
+															</ol>
+															<span><br/>Each style has three different views (Item > Options > Rules) that can be navigated to via the buttons on the bottom left:</span>
+															<ul>
+																<li>Items</li>
+																<li>Options</li>
+																<li>Rules</li>
+															</ul>
+														</div>
+													</div>
+
+													<button class="pictureNavBtn rightZero">&gt;</button>
+												</div>
+												<p class="pictureDescription"></p>
+												<div class="divGraphicDivider"></div>
+											</div>
+
+										</div>
+									</div>
+								
+								</li>
+
+								<li class="event" data-is-expanded="0">
+									
+									<div>
+										<h1 class='member-title'>Solidworks Export Tool</h1>
+										<div class="sub-title">
+											<img src="images/WPF Apps/Solidworks Export Tool/solidworks_export_tool_icon.png"></img>
+											<p>C# - Solo Development - Prism Framework</p>
+										</div>
+									</div>
+									<div class="member-content">
+										<svg class="timelineMarker">
+											<polygon points="0,0 20,0 30,10 0,10" class="timelineMarker"></polygon>
+										</svg>
+										<div>
+											<p class="left">This tool was made to streamline engineering's exporting from Solidworks. I built this as a place to run various Solidworks macros, but only the "Save As" macro was created / needed. 
+												By hooking directly into Solidworks, the application navigates the Solidwork's tree and reads metadata to generate the required extension types selected in the "Save As" macro.<br/><br/>
+												Unfortunately, I do not have any pictures of this application truly interacting with Solidworks.
+											</p>
+											<h3 class="featureListHeader">Feature List</h3>
+											<ul>
+												<li>Lower Export Time from Solidworks
+													<ul>
+														<li>Export multiple parts as multiple extensions all at once with the single click of a button</li>
+													</ul>
+												</li>
+												<li>Log Exporting
+													<ul>
+														<li>Specify an Access Database, or a location of an Access Database, and the applicataion will add rows for each part stating its exports done and the date of the export</li>
+													</ul>
+												</li>
+												<li>Direct Solidworks Integration
+													<ul>
+														<li>The application links directly with an open Solidworks application to read all the information required to export</li>
+													</ul>
+												</li>
+												<li>Color Scheme Settings
+													<ul>
+														<li>Change the color scheme of the entire application to any colors you want at any time</li>
+													</ul>
+												</li>
+											</ul>
+
+											<div class="pictureViewer" data-selectedindex="0">
+												<!-- doing this because no 'data' attributes are working for me -->
+												<div class="dataDiv">0</div>
+												<h2 class="pictureTitle"></h2>
+												<div class="pictureHolder">
+													<button class="pictureNavBtn leftZero">&lt;</button>
+													
+													<div class="viewerPicture">
+														<div class="dataTitle">Home Tab (1 of 2)</div>
+														<img src="images/WPF Apps/Solidworks Export Tool/main_view.png"></img>
+														<div class="dataDescription">This is one of three tabs at the top and what users will primarily be working in. First the user must connect to their open Solidworks app, then get their "Active Doc". 
+															Once they've done that, they can get all the children parts / assemblies of their active doc. When these are successful, the red square to the right of each will turn green. 
+															The application will place information from the active doc and all its children into the table on the middle left side of the screen. Users will select the parts they want to export in this 
+															table.<br/><br/>
+															On the right side of the screen is a tab control with the first tab being "Save As". This was the intended area for more macros to be placed and ran when selected.
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">Home Tab (2 of 2)</div>
+														<img src="images/WPF Apps/Solidworks Export Tool/main_view_output_settings.png"></img>
+														<div class="dataDescription">The "Output Settings" are at the bottom of the page and can be hidden to make more space above. The first option is the "Output Folder", this is the location where the 
+															exported extensions will be placed. This is also the place to specifiy an Access Database for further export logging.<br/><br/>
+															Next is the "Filename Format" section, users can make each filename follow same format using this method. The application will read the available properties of the parts and add them to the 
+															bottom right list view. Users can click a property to add it to the filename, so when a part is exported, it will take that property of the exported part and put it into the filename. Any 
+															other generic text can be added as well to separate properties. Parts that do not have a property from the filename format will throw a warning during exporting.
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">Log Tab</div>
+														<img src="images/WPF Apps/Solidworks Export Tool/log_view.png"></img>
+														<div class="dataDescription">All of the current statuses of the export will be placed here and the table consists of each part being exported and all the exports being done for that part as a nested table. 
+															Users can right click on parts actively being exported to skip them. Once an export has been started a status bar will be placed on the bottom of the entire application stating how many parts are left 
+															and which part is currently being worked on. Through this menu, users can pause or cancel the export at any time.
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">Settings (1 of 3)</div>
+														<img src="images/WPF Apps/Solidworks Export Tool/settings_menu.png"></img>
+														<div class="dataDescription">The only options in the settings tab are for changing the color scheme of the application. This was done because it seemed interesting to try out and I had some free time 
+															to mess with it. I went with the 6:3:1 rule, where "Color 1" is ~60%, "Color  2" is ~30%, and "Color 3" is ~10% of the application. I also shade the some amount for specific nested or hovered things. 
+															By changing the "Color Offset" this will affect how intense that shading is.
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">Settings (2 of 3)</div>
+														<img src="images/WPF Apps/Solidworks Export Tool/settings_menu_changed.png"></img>
+														<div class="dataDescription">Here is an example of changing the color scheme of the application. All the changes to color can be made in realtime and do not require a restart of the application.
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">Settings (3 of 3)</div>
+														<img src="images/WPF Apps/Solidworks Export Tool/main_view_new_colors.png"></img>
+														<div class="dataDescription">This is the home tab with the new colors set in the settings menu.
+														</div>
+													</div>
+
+													<button class="pictureNavBtn rightZero">&gt;</button>
+												</div>
+												<p class="pictureDescription"></p>
+												<div class="divGraphicDivider"></div>
+											</div>
+										</div>
+									</div>
+								
+								</li>
+							
+								<li class="event" data-is-expanded="0">
+									
+									<div>
+										<h1 class='member-title'>Build Sheet Tool (Version 2)</h1>
+										<div class="sub-title">
+											<img src="images/WPF Apps/Build Sheet Tool (Version 2)/rogue_build_sheet_tool_icon.png"></img>
+											<p>C# - Solo Development - Prism Framework</p>
+										</div>
+									</div>
+									<div class="member-content">
+										<svg class="timelineMarker">
+											<polygon points="0,0 20,0 30,10 0,10" class="timelineMarker"></polygon>
+										</svg>
+										<div>
+											<p class="left">This application was the next step for the Build Sheet Tool and was a culmination of everything I had learned with WPF and Prism. It was planned to have more features and be easier to use than the 
+												first Build Sheet Tool, however, I was not given the time to complete it and was pulled away from application development in general to fill a different role in the company. I still believe it deserves some merit 
+												though, since I took the jump from an Access Database to a Microsoft SQL Server and added onto some features of the first Build Sheet Tool.<br/><br/>
+												I also made most of the application wide icons in Inkscape. For the other applications, I would only make the main application logo, but in this application, I wanted to create exactly the icons I wanted for each 
+												use. This also gave me the ability to easily make white and black versions of each icon for swapping when the color scheme required it.
+											</p>
+											<h3 class="featureListHeader">Feature List</h3>
+											<ul>
+												<li>Improved UI and Functionality
+													<ul>
+														<li>Use easier to follow UI and increased features in the application as a whole</li>
+													</ul>
+												</li>
+												<li>Configurable Items
+													<ul>
+														<li>Items and options (and rules) are configured via a separate application for quality control (Product Configurator)</li>
+													</ul>
+												</li>
+												<li>Check-In / Check-Out Orders
+													<ul>
+														<li>In order to edit an order, users must check-out the order which will lock it from being edited by another user</li>
+													</ul>
+												</li>
+												<li>Logins
+													<ul>
+														<li>The first Build Sheet Tool had no way to log in as a specific user, now, users must log into an account with appropriate permissions to edit orders</li>
+													</ul>
+												</li>
+												<li>Change Log / Logging (PARTIALLY IMPLEMENTED)
+													<ul>
+														<li>Know exactly which user made changes and when with in-depth logging and modification tracking for each order</li>
+													</ul>
+												</li>
+												<li>Revision Control
+													<ul>
+														<li>View previous revisions alongside the current revision of each order</li>
+													</ul>
+												</li>
+												<li>Color Scheme Settings
+													<ul>
+														<li>Change the color scheme of the entire application to any colors you want at any time</li>
+													</ul>
+												</li>
+											</ul>
+
+											<div class="pictureViewer" data-selectedindex="0">
+												<!-- doing this because no 'data' attributes are working for me -->
+												<div class="dataDiv">0</div>
+												<h2 class="pictureTitle"></h2>
+												<div class="pictureHolder">
+													<button class="pictureNavBtn leftZero">&lt;</button>
+													
+													<div class="viewerPicture">
+														<div class="dataTitle">Order Tabs - In Progress</div>
+														<img src="images/WPF Apps/Build Sheet Tool (Version 2)/in_progress_tab.png"></img>
+														<div class="dataDescription"><span>Similar to the first Build Sheet Tool, there are three main tabs for choosing orders to view:</span>
+															<ul>
+																<li>Pending: Create, view, or edit orders that are not signed / not in production</li>
+																<li>In Progress: view or edit orders that are either in production or ready to be put into production</li>
+																<li>Archive: view orders that are completed or have been obsoleted</li>
+															</ul>
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">Order Tabs (1 of 3) - Customer Information</div>
+														<img src="images/WPF Apps/Build Sheet Tool (Version 2)/opened_orders_customer_information.png"></img>
+														<div class="dataDescription"><span>Customer information can be save via the "Customers" tab in the bottom left. This lets users entering information to quickly select their customer and autofill the 
+															customer's information.<br/><br/>
+															There are three main tabs of an order:</span>
+															<ul>
+																<li>Customer Information: typical customer information is entered here, such as: customer name, address, and contact information</li>
+																<li>Rogue Information: In this case, it is specialized for "Rogue", but this is the place to enter the internal salesman information and other internal order information like an "Estimate Number"</li>
+																<li>Box Editor: Here is where the information from the Product Configurator would be used to create multiple customizable products that would populate the order</li>
+															</ul>
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">Order Tabs (2 of 3) - Rogue Information</div>
+														<img src="images/WPF Apps/Build Sheet Tool (Version 2)/opened_orders_rogue_information.png"></img>
+														<div class="dataDescription"><span>Salemen information can be save via the "Salesmen" tab in the bottom left. This lets users entering information to quickly select the salesman and autofill the 
+															salesman's information.<br/><br/>
+															There are three main tabs of an order:</span>
+															<ul>
+																<li>Customer Information: typical customer information is entered here, such as: customer name, address, and contact information</li>
+																<li>Rogue Information: In this case, it is specialized for "Rogue", but this is the place to enter the internal salesman information and other internal order information like an "Estimate Number"</li>
+																<li>Box Editor: Here is where the information from the Product Configurator would be used to create multiple customizable products that would populate the order</li>
+															</ul>
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">Order Tabs (3 of 3) - Box Editor</div>
+														<img src="images/WPF Apps/Build Sheet Tool (Version 2)/opened_orders_box_editor.png"></img>
+														<div class="dataDescription"><span>There's quite a lot to unpack here, so I'm not going to go super in-depth. Users can add as many "products" as needed and can select the specific product (style) 
+															that have been generated within the Product Configurator. This brings in each item as a row in the right side table and each item's option into the "Value" column as a dropdown. If the item is 
+															marked as "Custom" in the Product Configurator, a "Custom" option will be added to the dropdown which would replace the item's value on the estimate / build sheet with the "Description" column.<br/><br/>
+															There are three main tabs of an order:</span>
+															<ul>
+																<li>Customer Information: typical customer information is entered here, such as: customer name, address, and contact information</li>
+																<li>Rogue Information: In this case, it is specialized for "Rogue", but this is the place to enter the internal salesman information and other internal order information like an "Estimate Number"</li>
+																<li>Box Editor: Here is where the information from the Product Configurator would be used to create multiple customizable products that would populate the order</li>
+															</ul>
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">Box Editor (1 of 2) - Previous Revisions</div>
+														<img src="images/WPF Apps/Build Sheet Tool (Version 2)/opened_orders_previous_revision.png"></img>
+														<div class="dataDescription">Users can view previous revisions of an order by selecting the revision they want to view in the revision dropdown. Previous revisions will have a colored border around them to 
+															make them stand out from the current revision. The revision of the shown order is also shown in the top left title for the order.
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">Box Editor (2 of 2) - Multiple Windows</div>
+														<img src="images/WPF Apps/Build Sheet Tool (Version 2)/opened_orders_new_window.png"></img>
+														<div class="dataDescription">The application supports multiple popout windows for side-by-side viewing of orders. This also includes the ability to pop previous revision windows in and out. To pop out a 
+															window, users can click the box with an arrow going out of it in the top right corner. To pop it back in, users can click the box with an arrow pointing inwards, which is also in the top right corner.<br/><br/>
+															In this image, the current revision is popped out, while the previous revision is still inside the main application.
+														</div>
+													</div>
+
+													<button class="pictureNavBtn rightZero">&gt;</button>
+												</div>
+												<p class="pictureDescription"></p>
+												<div class="divGraphicDivider"></div>
+											</div>
+
+											<div class="pictureViewer" data-selectedindex="0">
+												<!-- doing this because no 'data' attributes are working for me -->
+												<div class="dataDiv">0</div>
+												<h2 class="pictureTitle"></h2>
+												<div class="pictureHolder">
+													<button class="pictureNavBtn leftZero">&lt;</button>
+													
+													<div class="viewerPicture">
+														<div class="dataTitle">Customers Tab</div>
+														<img src="images/WPF Apps/Build Sheet Tool (Version 2)/customers_tab.png"></img>
+														<div class="dataDescription">Customers can be added, edited, and deleted through this menu. Only users with permissions to edit customers can edit this tab.<br/><br/>
+															The customers listed in this tab are available to select in the "Customer Information" tab in the order. Doing so will autofill information listed in this tab.
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">Salesmen Tab</div>
+														<img src="images/WPF Apps/Build Sheet Tool (Version 2)/salesmen_tab.png"></img>
+														<div class="dataDescription">Salesmen can be added, edited, and deleted through this menu. Only users with permissions to edit salesmen can edit this tab.<br/><br/>
+															The salesmen listed in this tab are available to select in the "Rogue Information" tab in the order. Doing so will autofill information listed in this tab.
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">Admin Menu</div>
+														<img src="images/WPF Apps/Build Sheet Tool (Version 2)/admin_menu_tab.png"></img>
+														<div class="dataDescription">Only logged in admin users can view this tab. From this tab, admins can add, edit, and delete users or change specific user permissions.
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">Settings Menu (1 of 2)</div>
+														<img src="images/WPF Apps/Build Sheet Tool (Version 2)/settings_tab.png"></img>
+														<div class="dataDescription">Currently, the only available settings are for the application wide color scheme. This uses the same 6:3:1 color rule as the Solidworks Export Tool, except this application 
+															allows for multiple saved color profiles. "Light" and "Dark" are system color schemes that cannot be updated or deleted.<br/><br/>
+															Settings are saved per user and per computer, meaning that logged in users will have different color profiles and an application that has no logged in user will save the color profiles as the 
+															settings of the computer.
+														</div>
+													</div>>
+													<div class="viewerPicture">
+														<div class="dataTitle">Settings Menu (2 of 2)</div>
+														<img src="images/WPF Apps/Build Sheet Tool (Version 2)/settings_tab_changed.png"></img>
+														<div class="dataDescription">This displays an example of a different color scheme selection. Note that the icons and text will be black or white depending on the object they are on top of.
+														</div>
+													</div>>
+
+													<button class="pictureNavBtn rightZero">&gt;</button>
+												</div>
+												<p class="pictureDescription"></p>
+												<div class="divGraphicDivider"></div>
+											</div>
+										</div>
+									</div>
+								
+								</li>
+							
+								<li class="event" data-is-expanded="0">
+									
+									<div>
+										<h1 class='member-title'>Fishbowl BOM Costing</h1>
+										<div class="sub-title">
+											<img src="images/WPF Apps/Fishbowl BOM Costing/fishbowl_bom_costing_icon.png"></img>
+											<p>C# - Solo Development - Prism Framework</p>
+										</div>
+									</div>
+									<div class="member-content">
+										<svg class="timelineMarker">
+											<polygon points="0,0 20,0 30,10 0,10" class="timelineMarker"></polygon>
+										</svg>
+										<div>
+											<p class="left">The inventory software, Fishbowl, does not have any true, reliable way to calculate the rolled up Bill of Materials (BOM) costs. They also do not have a way to automatically take that rolled up cost 
+												and set it as the cost for the finished good(s) of the BOM. Now, Fishbowl has their reasons for this I'm sure, but my CEO at the time wanted to be able to do this regardless. So, I whipped this application up in 
+												2 - 3 weeks with a class library I made for integrating with Fishbowl. I had this library somewhat done beforehand in preperation for my applications to retrieve and update information from Fishbowl.<br/><br/>
+												Fishbowl is a very complicated software with a lot of quirks, and trying to explain all of them, and how this application uses them would take quite a while.
+											</p>
+											<h3 class="featureListHeader">Feature List</h3>
+											<ul>
+												<li>Parts Rolled Up BOM Costing
+													<ul>
+														<li>A part's cost can be calculated with its default BOM</li>
+													</ul>
+												</li>
+												<li>Vendor Part Costing
+													<ul>
+														<li>A part's standard cost field can be updated automatically based off its default vendor cost</li>
+													</ul>
+												</li>
+												<li>Inventory Cost Changes
+													<ul>
+														<li>Directly see how much the change in cost will affect current inventory values</li>
+													</ul>
+												</li>
+												<li>Automatic Memo Posting
+													<ul>
+														<li>Memos (Notes) are posted to each changed part in Fishbowl stating the change, previous state, and current state</li>
+													</ul>
+												</li>
+												<li>Logging
+													<ul>
+														<li>Logs of each post to Fishbowl are saved and viewable in the application</li>
+													</ul>
+												</li>
+											</ul>
+
+											<div class="pictureViewer" data-selectedindex="0">
+												<!-- doing this because no 'data' attributes are working for me -->
+												<div class="dataDiv">0</div>
+												<h2 class="pictureTitle"></h2>
+												<div class="pictureHolder">
+													<button class="pictureNavBtn leftZero">&lt;</button>
+													
+													<div class="viewerPicture">
+														<div class="dataTitle">BOM Costing</div>
+														<img src="images/WPF Apps/Fishbowl BOM Costing/bom_costing_view.PNG"></img>
+														<div class="dataDescription">Clicking the "Get BOM Costing..." button in the top left will retrieve all parts from Fishbowl that have a default BOM. Clicking "New BOM Costing" in the top left will 
+															run through each part found and put its calculated cost into the "New Std Cost" (New Standard Cost) column of the table and highlight it. Users can also enter in a manual value which will color 
+															the cell orange. Right clicking on any row will also let the user run BOM costing on any selected row.<br/><br/>
+															A progress bar will appear at the bottom of the application stating which part's cost is being calculated and how many are left in the queue. This process is asynchronous and parts can be added 
+															to a running queue. Once all the desired parts have been calculated, clicking the "Post BOM Costing..." button in the top right will post any changed parts to Fishbowl. This will also add a Memo 
+															to each part stating that the change was made from this application and the previous and new cost of the part. In addition, the application will save each posted part into a log file which is 
+															viewable through the "Post Log" tab.<br/><br/>
+															Users can filter the parts found by any field in the left side "Filter" view. Lastly, any part can be selected and have its cost changed back to the current standard cost through the right click 
+															context menu, or through the "Revert Cost of..." button at the top of the application.
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">Vendor Part Costing</div>
+														<img src="images/WPF Apps/Fishbowl BOM Costing/vendor_part_costing_view.PNG"></img>
+														<div class="dataDescription">Features here are nearly identical as the BOM Costing tab. Instead of getting parts with default BOM's, this tab will get each part with a default vendor part. If the 
+															default vendor part's Unit of Measure (UOM) is different than the retrieved part, it will convert the vendor part's UOM to the part's UOM and calculate the appropriate cost.
+														</div>
+													</div>
+													<div class="viewerPicture">
+														<div class="dataTitle">Post Log</div>
+														<img src="images/WPF Apps/Fishbowl BOM Costing/logs_view.PNG"></img>
+														<div class="dataDescription">This is where each post to Fishbowl is logged and viewed.
+														</div>
+													</div>
+													<button class="pictureNavBtn rightZero">&gt;</button>
+												</div>
+												<p class="pictureDescription"></p>
+												<div class="divGraphicDivider"></div>
+											</div>
+
+										</div>
+									</div>
+								
+								</li>
+
+							</ul>
+						</div>
+
+					</div>
+
+				
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<div class="footerNavWrapper">
+								<ul class="footerNav">
+									<li><a href="index.html">HOME</a></li>
+									<li><a href="professionalexperience.html">PROFESSIONAL EXPERIENCE</a></li>
+									<li><a href="personalexperience.html">PERSONAL EXPERIENCE</a></li>
+									<li><a href="aboutme.html">ABOUT ME</a></li>
+								</ul>
+							</div>
+						</section>
+						<section class="split contact">
+							<section>
+								<h4>Email</h4>
+								<p>evanmgoddard@gmail.com</p>
+							</section>
+							<section>
+								<h4>Social</h4>
+								<ul class="icons alt">
+									<li><a href="https://www.linkedin.com/in/evan-goddard-734448180/" target="_blank" class="icon brands alt fa-linkedin"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.facebook.com/evan.goddard.9/" target="_blank" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/evan_m_goddard/" target="_blank" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								</ul>
+							</section>
+							<section>
+								<h4>Resume</h4>
+								<a class="aOrangeLink" href="pdfs/Evan Goddard Resume.pdf" target="_blank">pdf</a>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<!--div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div-->
+
+			</div>
+
+			
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<!-- Place above timeline, or else picture viewer will be collapsed and unable to read initial height properly -->
+			<script src="assets/js/pictureViewer.js"></script>
+			<script src="assets/js/timeline.js"></script>
+	</body>
+</html>

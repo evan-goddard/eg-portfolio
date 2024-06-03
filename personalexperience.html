@@ -1,0 +1,437 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Evan Goddard - Personal Experience</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Img Viewer -->
+			<div class="imgViewer">
+				<img class="imgViewerImage" src=""></img>
+				<!--canvas class="imgViewerCanvas"></canvas-->
+				<button class="closeImgViewerBtn">x</button>
+			</div>
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">EVAN GODDARD</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="professionalexperience.html">Professional Experience</a></li>
+							<li class="active"><a href="personalexperience.html">Personal Experience</a></li>
+							<li><a href="aboutme.html">About Me</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/evan-goddard-734448180/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://www.facebook.com/evan.goddard.9/" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.instagram.com/evan_m_goddard/"  target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main" class="maxWidth">
+
+						<div>
+							<p class="left">I primarily started learning game development in Unity since it seemed like the lowest barrier of entry at the time. I took some online learning courses, but never truly dived into creating a game until after college. 
+								During college, I was learning Unreal Engine and I made a few projects for college but none that really stood out to me as worth showing on my portfolio. Therefore, what you see on this page is purely what I've done in my own 
+								free time.<br/><br/>
+								I started working towards creating my first fully fledged game, Liar's Dice, in Unity. However, due to some of Unity's actions and the detrimental affects it may one day have on an indie / solo developer, 
+								I have pulled away from Liar's Dice's development and looked for a new engine I could develop in. That's when I found Godot! I started messing around in Godot and in just a week or two really started to enjoy it and get the hang 
+								of it. I decided to use GDScript as opposed to my favorite language, C#, because I knew there would be more resources and more friendly documentation for their own language. Besides, who doesn't enjoy learning a new coding 
+								language?<br/><br/>
+								I believe that at some point I will turn my Unity Liar's Dice project into a Godot project, but before that, I want to continue working on the little game I've started in Godot! I will still list Liar's Dice in this section 
+								because there is a lot I had to learn and setup that will help me down the line.
+							</p>
+						</div>
+
+						<div id="personalContent">
+
+							<h2>Godot Game Development</h2>
+							<ul class="timeline">
+								<li class="event" data-is-expanded="0">
+									
+									<div>
+										<h1 class='member-title'>Title TBD</h1>
+										<div class="sub-title">
+											<img src=""></img>
+											<p>GDScript - Solo Development</p>
+										</div>
+									</div>
+									<div class="member-content">
+										<svg class="timelineMarker">
+											<polygon points="0,0 20,0 30,10 0,10" class="timelineMarker"></polygon>
+										</svg>
+										<div>
+											<p class="left">As my first experience using Godot, I've been really happy with how this project has turned out so far. I love playing roguelike games and have always been a sucker for fast paced FPS games. So, I 
+												figured I should try my hand at creating a simple one.<br/><br/>
+												Figuring out a decent movement system was one of my favorite parts and I really enjoy making satisfying gameplay elements. I decided to have an acceleration based movement system rather than a fixed movement speed. 
+												The player can also use a dash and has the potential for multiple jumps.
+											</p>
+											<h3 class="featureListHeader">Accomplishments</h3>
+											<ul>
+												<li>Weapons
+													<ul>
+														<li>The player can hold up to four weapons, swapping between them using the scrollwheel</li>
+														<li>Each weapon has a variety of settings, such as:
+															<ul>
+																<li>Damage</li>
+																<li>Projectile Speed</li>
+																<li>Fire Rate</li>
+																<li>Burst Fire</li>
+																<li>Semi-automatic and Automatic Fire Modes</li>
+																<li>Hitscan Capability</li>
+																<li>Recoil (IN PROGRESS)</li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+												<li>Generic Pickup Item
+													<ul>
+														<li>Using a versatile script and by making minimal additions, anything can be picked up by the player</li>
+														<li>Supports either collision based pickup or interactable pickup</li>
+														<li>Animates the node that will be picked up using a simple bob up and down</li>
+													</ul>
+												</li>
+												<li>Movement
+													<ul>
+														<li>Movement is acceleration based, meaning that players start slower and speed up to their max speed</li>
+														<li>Dashing simply increases the player's acceleration in their movement direction</li>
+														<li>Players can have multiple jumps in the air</li>
+													</ul>
+												</li>
+											</ul>
+
+											<h3 class="featureListHeader">Plans</h3>
+											<ul>
+												<li>Passive Item Upgrades
+													<ul>
+														<li>Like most roguelikes, I will be implementing items that the player can pick up to improve their stats</li>
+													</ul>
+												</li>
+												<li>Classes / Active Abilities
+													<ul>
+														<li>I have a basic idea of a theme I'd like to go with this game, in which case, I'll want to add at least three classes with varying active abilities</li>
+														<li>If I do this, I will most likely decrease the amount of weapons from four to either two or three</li>
+													</ul>
+												</li>
+											</ul>
+
+											<div class="pictureViewer" data-selectedindex="0">
+												<!-- doing this because no 'data' attributes are working for me -->
+												<div class="dataDiv">0</div>
+												<h2 class="pictureTitle"></h2>
+												<div class="pictureHolder">
+													<button class="pictureNavBtn leftZero">&lt;</button>
+													
+													<div class="viewerPicture">
+														<div class="dataTitle">Demo</div>
+														<iframe src="https://www.youtube.com/embed/hYExA7srJ5Y?si=GW7anvMOOBhwmtkG" allow="fullscreen"></iframe>
+														<div class="dataDescription">A demo for my first Godot project showing what I've accomplished so far.</div>
+													</div>
+
+													<button class="pictureNavBtn rightZero">&gt;</button>
+												</div>
+												<p class="pictureDescription"></p>
+												<div class="divGraphicDivider"></div>
+											</div>
+
+										</div>
+									</div>
+								
+								</li>
+							
+							</ul>
+
+
+							<h2>Unity Game Development</h2>
+							<ul class="timeline">
+								<li class="event" data-is-expanded="0">
+									
+									<div>
+										<h1 class='member-title'>Liar's Dice</h1>
+										<div class="sub-title">
+											<img src=""></img>
+											<p>C# - On / Off Solo Development - Perforce Helix Source Control</p>
+										</div>
+									</div>
+									<div class="member-content">
+										<svg class="timelineMarker">
+											<polygon points="0,0 20,0 30,10 0,10" class="timelineMarker"></polygon>
+										</svg>
+										<div>
+											<p class="left">As my first real game development project, I wanted to create something that I was familiar with, but also give it a special twist. My family and I have always been fans of a dice game 
+												called "Liar's Dice", so deciding as that for the game was easy enough. The twist I am going to add is the introduction of special cards with various effects that change the way the game plays. 
+												For example, you could play a card that increases or decreases the roll result of one dice in your hand. Being able to have cards like this would further increase the strategy and complexity of the game!<br/><br/>
+												I won't spoil all my ideas for this game here though, you'll have to wait until it comes out and see them for yourself!<br/><br/>
+												A few of my friends who were interested in game development jumped in here and there during this project. However, life is busy, so none of them kept with development and what I've shown here is only work that 
+												I did personally.
+											</p>
+
+											<h3 class="featureListHeader">Accomplishments</h3>
+											<ul>
+												<li>Learned Perforce Helix Core
+													<ul>
+														<li>Since I initially had a few friends helping me, I decided to find a source control option that integrated in with Unity and would more or less be simple enough for newcomers. I found 
+															Helix Core and thought it'd be worth learning and the application, as a whole, looked nice. It took a couple days to get it all figured out, but since I've been using it it's been very 
+															intuitive.
+														</li>
+													</ul>
+												</li>
+												<li>Using Steamworks and Mirror for Multiplayer
+													<ul>
+														<li>I've never touched multiplayer development before, so this was tough! I still definitely don't understand all the inner workings and best practices, but I was able to get 
+															a working version so I could actually play a game of Liar's Dice online.
+														</li>
+													</ul>
+												</li>
+												<li>Reading Voice Input
+													<ul>
+														<li><span>I used a Unity asset called "</span>
+															<a class="aOrangeLink" target="_blank" href="https://assetstore.unity.com/packages/tools/ai-ml-integration/undertone-offline-whisper-ai-voice-recognition-246877">Undertone</a>
+															<span>", which is an AI voice recognition software made by LeastSquares LLC, to listen to the player microphone and read input for specified words. 
+															Currently, I have a changeable list where if any words from it appear in the generated text from Undertone, it will trigger calling the bet of the previous player.</span>
+														</li>
+													</ul>
+												</li>
+											</ul>
+
+											<h3 class="featureListHeader">Plans</h3>
+											<ul>
+												<li>Unique Liar's Dice Experience
+													<ul>
+														<li>Experience Liar's Dice like never before with unique card effects that change the way the game plays!</li>
+													</ul>
+												</li>
+												<li>Voice Controls
+													<ul>
+														<li>Many times you can tell someone's confidence by the tone of their voice. So, voice controls for betting on the amount and side of dice will be supported.</li>
+														<li>Tired of just calling your friends liars? Custom words can trigger calling the previous player's bid, so you can call them anything you want!</li>
+													</ul>
+												</li>
+												<li>Customize Your Way
+													<ul>
+														<li>Customize your dice cups and roll cages with a shape / layer editor to create your own custom graphics!</li>
+													</ul>
+												</li>
+											</ul>
+
+											<div class="pictureViewer" data-selectedindex="0">
+												<!-- doing this because no 'data' attributes are working for me -->
+												<div class="dataDiv">0</div>
+												<h2 class="pictureTitle"></h2>
+												<div class="pictureHolder">
+													<button class="pictureNavBtn leftZero">&lt;</button>
+													
+													<div class="viewerPicture">
+														<div class="dataTitle">Demo</div>
+														<iframe src="https://www.youtube.com/embed/kBj0SEbzwLs?si=mcLs4EoVToGkdBSi" allow="fullscreen"></iframe>
+														<div class="dataDescription">A demo for Liar's Dice showcasing the available features of the game. I will be creating a better video for this in the future, but for the sake of time this is the current video.</div>
+													</div>
+
+													<button class="pictureNavBtn rightZero">&gt;</button>
+												</div>
+												<p class="pictureDescription"></p>
+												<div class="divGraphicDivider"></div>
+											</div>
+
+										</div>
+									</div>
+								
+								</li>
+							</ul>
+
+
+							<h2>Arduino Projects</h2>
+							<ul class="timeline">
+								<li class="event" data-is-expanded="0">
+									
+									<div>
+										<h1 class='member-title'>LED Coaster</h1>
+										<div class="sub-title">
+											<img src=""></img>
+											<p>C++ - Solo Software Development</p>
+										</div>
+									</div>
+									<div class="member-content">
+										<svg class="timelineMarker">
+											<polygon points="0,0 20,0 30,10 0,10" class="timelineMarker"></polygon>
+										</svg>
+										<div>
+											<p class="left">This is a project that I am working on with a mechanical engineer, Brett Goddard, who is creating / designing the hardware. While I am developing the software that will interact with 
+												the hardware. We decided to work on this side project because we believe it has a lot of potential, plus, I had an excuse to finally learn Arduino. However, The examples I show here are from a very early version.
+											</p>
+											<h3 class="featureListHeader">Feature List</h3>
+											<ul>
+												<li>Multiple Color Modes
+													<ul>
+														<li>Change the way the coaster lights up, from color presets to LED modes</li>
+													</ul>
+												</li>
+												<li>Customizable
+													<ul>
+														<li>The coaster is being designed to have different materials and accent pieces</li>
+													</ul>
+												</li>
+											</ul>
+
+											<h3 class="featureListHeader">Plans</h3>
+											<ul>
+												<li>Standalone Desktop Application
+													<ul>
+														<li>We'd like to create a desktop application that would let the user customize color / mode settings even further</li>
+													</ul>
+												</li>
+											</ul>
+
+											<div class="pictureViewer" data-selectedindex="0">
+												<!-- doing this because no 'data' attributes are working for me -->
+												<div class="dataDiv">0</div>
+												<h2 class="pictureTitle"></h2>
+												<div class="pictureHolder">
+													<button class="pictureNavBtn leftZero">&lt;</button>
+													
+													<div class="viewerPicture">
+														<div class="dataTitle">Rainbow Circle</div>
+														<video src="videos/LED Coaster/coaster_rainbow_circle.mp4" controls></video>
+														<div class="dataDescription">A classic rotating Rainbow Circle</div>
+													</div>
+
+													<div class="viewerPicture">
+														<div class="dataTitle">Solid Color</div>
+														<video src="videos/LED Coaster/coaster_solid_color.mp4" controls></video>
+														<div class="dataDescription">Solid Color</div>
+													</div>
+
+													<div class="viewerPicture">
+														<div class="dataTitle">Breathe</div>
+														<video src="videos/LED Coaster/coaster_breathe.mp4" controls></video>
+														<div class="dataDescription">Breathe</div>
+													</div>
+
+													<div class="viewerPicture">
+														<div class="dataTitle">Marquee</div>
+														<video src="videos/LED Coaster/coaster_marquee.mp4" controls></video>
+														<div class="dataDescription">Marquee</div>
+													</div>
+
+													<div class="viewerPicture">
+														<div class="dataTitle">Orbit</div>
+														<video src="videos/LED Coaster/coaster_orbit.mp4" controls></video>
+														<div class="dataDescription">Orbit</div>
+													</div>
+
+													<div class="viewerPicture">
+														<div class="dataTitle">Bar</div>
+														<video src="videos/LED Coaster/coaster_bar.mp4" controls></video>
+														<div class="dataDescription">Bar</div>
+													</div>
+
+													<div class="viewerPicture">
+														<div class="dataTitle">Wave (1 of 2) - Rainbow</div>
+														<video src="videos/LED Coaster//coaster_wave_rainbow.mp4" controls></video>
+														<div class="dataDescription">Rainbow Wave</div>
+													</div>
+
+													<div class="viewerPicture">
+														<div class="dataTitle">Wave (2 of 2) - Solid Color</div>
+														<video src="videos/LED Coaster/coaster_wave_white.mp4" controls></video>
+														<div class="dataDescription">Solid Colow Wave</div>
+													</div>
+
+													<button class="pictureNavBtn rightZero">&gt;</button>
+												</div>
+												<p class="pictureDescription"></p>
+												<div class="divGraphicDivider"></div>
+											</div>
+
+										</div>
+									</div>
+								
+								</li>
+							</ul>
+
+						</div>
+								<!-- Preformatted Code 
+									<h2>Preformatted</h2>
+									<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';
+</code></pre>-->
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<div class="footerNavWrapper">
+								<ul class="footerNav">
+									<li><a href="index.html">HOME</a></li>
+									<li><a href="professionalexperience.html">PROFESSIONAL EXPERIENCE</a></li>
+									<li><a href="personalexperience.html">PERSONAL EXPERIENCE</a></li>
+									<li><a href="aboutme.html">ABOUT ME</a></li>
+								</ul>
+							</div>
+						</section>
+						<section class="split contact">
+							<section>
+								<h4>Email</h4>
+								<p>evanmgoddard@gmail.com</p>
+							</section>
+							<section>
+								<h4>Social</h4>
+								<ul class="icons alt">
+									<li><a href="https://www.linkedin.com/in/evan-goddard-734448180/" target="_blank" class="icon brands alt fa-linkedin"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.facebook.com/evan.goddard.9/" target="_blank" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/evan_m_goddard/" target="_blank" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								</ul>
+							</section>
+							<section>
+								<h4>Resume</h4>
+								<a class="aOrangeLink" href="pdfs/Evan Goddard Resume.pdf" target="_blank">pdf</a>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<!--div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div-->
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<!-- Place above timeline, or else picture viewer will be collapsed and unable to read initial height properly -->
+			<script src="assets/js/pictureViewer.js"></script>
+			<script src="assets/js/timeline.js"></script>
+
+	</body>
+</html>
