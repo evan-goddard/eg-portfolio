@@ -4422,6 +4422,7 @@ input, select, textarea {
 			color: #e2e2e2;
 		}
 
+
 		#footer > section {
 			-moz-flex-basis: 50%;
 			-webkit-flex-basis: 50%;
@@ -4556,6 +4557,11 @@ input, select, textarea {
 
 		@media screen and (max-width: 980px) {
 
+			.footerNavWrapper {
+				visibility: collapse;
+				height: 0;
+			}
+
 			#footer {
 				display: block;
 			}
@@ -4581,15 +4587,15 @@ input, select, textarea {
 						}
 
 					#footer > section.split.contact > section {
-						padding: 4rem;
+						padding: 0.75rem;
 					}
 
 						#footer > section.split.contact > section:first-child {
-							padding: 4rem;
+							padding: 0.75rem;
 						}
 
 						#footer > section.split.contact > section:last-child {
-							padding: 4rem;
+							padding: 0.75rem;
 						}
 
 				#footer form label,
@@ -4619,15 +4625,15 @@ input, select, textarea {
 					}
 
 				#footer > section.split.contact > section {
-					padding: 2rem;
+					padding: 0.75rem;
 				}
 
 					#footer > section.split.contact > section:first-child {
-						padding: 2rem;
+						padding: 0.75rem;
 					}
 
 					#footer > section.split.contact > section:last-child {
-						padding: 2rem;
+						padding: 0.75rem;
 					}
 
 		}
@@ -4785,11 +4791,11 @@ input, select, textarea {
 		#navPanelToggle.alt {
 			background-color: rgba(255, 255, 255, 0.875);
 			box-shadow: 0 0.125rem 0.75rem 0 rgba(30, 37, 45, 0.25);
-			color: #212931;
+			color: #212931 !important;
 		}
 
 			#navPanelToggle.alt:hover {
-				background-color: #ffffff;
+				background-color: #facfbe;
 			}
 
 		@media screen and (max-width: 980px) {
@@ -4820,7 +4826,7 @@ input, select, textarea {
 		transition: transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
 		display: none;
 		-webkit-overflow-scrolling: touch;
-		background: #ffffff;
+		background: #212931;
 		box-shadow: none;
 		color: #212931;
 		height: 100%;
