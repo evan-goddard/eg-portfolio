@@ -1,6 +1,8 @@
 /*************************************
  * Functionality for the .pictureViewer class
  *************************************/
+var totalPictures = 0;
+var loadedPictures = 0;
 
 (function($) {
 
@@ -153,102 +155,148 @@
         $(this).closest(".pictureViewer")._changePicture(leftOrRight, -1);
     })
 
-    // initialize each .pictureHolder's height based off its picture(s) and setup navDots
-    $('.pictureHolder').each(function() {
+    
+    /* call this once all of our pictures have loaded, otherwise, the .height() will not be readable */
+    function setMaxPictureWidths() {
 
-        var pictureCount = 0;
-        var heightOfPicture = 0;
-        var holder = $(this);
+        // initialize each .pictureHolder's height based off its picture(s) and setup navDots
+        $('.pictureHolder').each(function() {
 
-        holder.children().each(function() {
-            if ($(this).hasClass("viewerPicture")) {
-                //  find picture with largest height
-                if ($(this).height() > heightOfPicture) {
-                    //largestPicture = $(this).attr("src");
-                    heightOfPicture = $(this).height();
+            var pictureCount = 0;
+            var heightOfPicture = 0;
+            var holder = $(this);
+
+            holder.children().each(function() {
+                if ($(this).hasClass("viewerPicture")) {
+                    $(this).children().each(function() {
+                        if (this.nodeName == "IMG") {
+                            //  find picture with largest height
+                            if (this.height > heightOfPicture) {
+                                //largestPicture = $(this).attr("src");
+                                heightOfPicture = this.height;
+                            }
+                        }
+                    });
+                    
+                    pictureCount += 1;
                 }
+            });
 
-                pictureCount += 1;
+            var isFirst = true;
+            var setRelative = false;
+
+
+            if (heightOfPicture != 0) {
+                holder.children().each(function() {
+                    if ($(this).hasClass("viewerPicture")) {
+                        var viewer = $(this);
+
+                        $(this).children().each(function() {
+                            if (this.nodeName == "IMG") {
+                                //  set largest to relative positioning so that they we maintain dynamic resizing
+                                if (this.height == heightOfPicture  && !setRelative) {
+                                    viewer.css("position", "relative");
+                                    setRelative = true // what if two or more pictures have the same height and are the largest?
+                                }
+                            }
+                        });
+                        
+
+                        $(this).css("width", "100%");
+                        $(this).css("height", "100%");
+
+                        // initialize title and description
+                        if (isFirst) {
+                            
+                            $(this).addClass("active");
+
+                            var title = "";
+                            var description = "";
+
+                            // get first active (index = 0) title and description
+                            $(this).children().each(function() {
+                                if ($(this).hasClass("dataTitle")) {
+                                    title = $(this).html();
+                                }
+                                else if ($(this).hasClass("dataDescription")) {
+                                    description = $(this).html();
+                                }
+                            });
+
+                            holder.parent().children().each(function() {
+
+                                if ($(this).hasClass("pictureTitle")) {
+                                    $(this).html(title);
+                                }
+                                else if ($(this).hasClass("pictureDescription")) {
+                                    $(this).html(description);
+                                }
+
+                            });
+
+                            isFirst = false;
+                        }
+                    }
+                });
+            }
+            else {
+                console.log("ERROR! largest picture could not be found on .pictureHolder")
+            }
+
+
+            // setup navDots
+            var dotsHolder = document.createElement("div"); // faster than creating jQuery object
+            dotsHolder = $(dotsHolder); // convert to jQuery
+            dotsHolder.addClass("navDotsHolder");
+
+            holder.after(dotsHolder); // insert dotsHolder after picture holder
+
+            for (var i = 0; i < pictureCount; i++) {
+                var navDot = document.createElement("div");
+                navDot = $(navDot);
+                navDot.addClass("navDot");
+                navDot.html(i);
+
+                // add navDot to holder
+                dotsHolder.append(navDot);
+
+                if (i == 0) {
+                    navDot.addClass("active");;
+                }
+            }
+
+        });
+    };
+    
+    
+    window.onload = (event) => {
+
+        totalPictures = $('img').length
+
+        $('img').each(function() {
+            if (this.complete) {
+                // If the image is already loaded (cached), handle it immediately
+                console.log("picture loaded (cached)!");
+                loadedPictures += 1;
+            } else {
+                // Attach the load event for images that aren't loaded yet
+                $(this).on("load", function() {
+                    console.log("picture loaded!");
+
+                    loadedPictures += 1;
+
+                    if (loadedPictures >= totalPictures) {
+                        setMaxPictureWidths();
+                    }
+                });
             }
         });
 
-        var isFirst = true;
-        var setRelative = false;
-
-
-        if (heightOfPicture != 0) {
-            holder.children().each(function() {
-                if ($(this).hasClass("viewerPicture")) {
-                    //  set largest to relative positioning so that they we maintain dynamic resizing
-                    if ($(this).height() == heightOfPicture  && !setRelative) {
-                        $(this).css("position", "relative");
-                        setRelative = true // what if two or more pictures have the same height and are the largest?
-                    }
-
-                    $(this).css("width", "100%");
-                    $(this).css("height", "100%");
-
-                    // initialize title and description
-                    if (isFirst) {
-                        
-                        $(this).addClass("active");
-
-                        var title = "";
-                        var description = "";
-
-                        // get first active (index = 0) title and description
-                        $(this).children().each(function() {
-                            if ($(this).hasClass("dataTitle")) {
-                                title = $(this).html();
-                            }
-                            else if ($(this).hasClass("dataDescription")) {
-                                description = $(this).html();
-                            }
-                        });
-
-                        holder.parent().children().each(function() {
-
-                            if ($(this).hasClass("pictureTitle")) {
-                                $(this).html(title);
-                            }
-                            else if ($(this).hasClass("pictureDescription")) {
-                                $(this).html(description);
-                            }
-
-                        });
-
-                        isFirst = false;
-                    }
-                }
-            });
+        if (loadedPictures >= totalPictures) {
+            setMaxPictureWidths();
         }
-        else {
-            console.log("ERROR! largest picture could not be found on .pictureHolder")
-        }
+    };
 
-
-        // setup navDots
-        var dotsHolder = document.createElement("div"); // faster than creating jQuery object
-        dotsHolder = $(dotsHolder); // convert to jQuery
-        dotsHolder.addClass("navDotsHolder");
-
-        holder.after(dotsHolder); // insert dotsHolder after picture holder
-
-        for (var i = 0; i < pictureCount; i++) {
-            var navDot = document.createElement("div");
-            navDot = $(navDot);
-            navDot.addClass("navDot");
-            navDot.html(i);
-
-            // add navDot to holder
-            dotsHolder.append(navDot);
-
-            if (i == 0) {
-                navDot.addClass("active");;
-            }
-        }
-
-    });
 
     // setup img click, having to do this because .viewerPictures have opacity set to 0 and not display to none (for animations), so we are always going to click the 'last' child picture.
     //      So, get parent holder and go through viewerPictures and check for active
