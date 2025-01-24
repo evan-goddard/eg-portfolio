@@ -169,7 +169,7 @@ var loadedPictures = 0;
             holder.children().each(function() {
                 if ($(this).hasClass("viewerPicture")) {
                     $(this).children().each(function() {
-                        if (this.nodeName == "IMG") {
+                        if (this.nodeName == "IMG" || this.nodeName == "IFRAME") {
                             //  find picture with largest height
                             if (this.height > heightOfPicture) {
                                 //largestPicture = $(this).attr("src");
@@ -186,13 +186,18 @@ var loadedPictures = 0;
             var setRelative = false;
 
 
-            if (heightOfPicture != 0) {
-                holder.children().each(function() {
-                    if ($(this).hasClass("viewerPicture")) {
-                        var viewer = $(this);
+            
+            holder.children().each(function() {
+                if ($(this).hasClass("viewerPicture")) {
+                    var viewer = $(this);
 
+                    if (heightOfPicture == 0 && isFirst) {
+                        console.log("ERROR! largest picture could not be found on .pictureHolder, setting first child as relative");
+                        viewer.css("position", "relative");
+                    }
+                    else {
                         $(this).children().each(function() {
-                            if (this.nodeName == "IMG") {
+                            if (this.nodeName == "IMG" || this.nodeName == "IFRAME") {
                                 //  set largest to relative positioning so that they we maintain dynamic resizing
                                 if (this.height == heightOfPicture  && !setRelative) {
                                     viewer.css("position", "relative");
@@ -200,48 +205,45 @@ var loadedPictures = 0;
                                 }
                             }
                         });
-                        
-
-                        $(this).css("width", "100%");
-                        $(this).css("height", "100%");
-
-                        // initialize title and description
-                        if (isFirst) {
-                            
-                            $(this).addClass("active");
-
-                            var title = "";
-                            var description = "";
-
-                            // get first active (index = 0) title and description
-                            $(this).children().each(function() {
-                                if ($(this).hasClass("dataTitle")) {
-                                    title = $(this).html();
-                                }
-                                else if ($(this).hasClass("dataDescription")) {
-                                    description = $(this).html();
-                                }
-                            });
-
-                            holder.parent().children().each(function() {
-
-                                if ($(this).hasClass("pictureTitle")) {
-                                    $(this).html(title);
-                                }
-                                else if ($(this).hasClass("pictureDescription")) {
-                                    $(this).html(description);
-                                }
-
-                            });
-
-                            isFirst = false;
-                        }
                     }
-                });
-            }
-            else {
-                console.log("ERROR! largest picture could not be found on .pictureHolder")
-            }
+
+                    $(this).css("width", "100%");
+                    $(this).css("height", "100%");
+
+                    // initialize title and description
+                    if (isFirst) {
+                        
+                        $(this).addClass("active");
+
+                        var title = "";
+                        var description = "";
+
+                        // get first active (index = 0) title and description
+                        $(this).children().each(function() {
+                            if ($(this).hasClass("dataTitle")) {
+                                title = $(this).html();
+                            }
+                            else if ($(this).hasClass("dataDescription")) {
+                                description = $(this).html();
+                            }
+                        });
+
+                        holder.parent().children().each(function() {
+
+                            if ($(this).hasClass("pictureTitle")) {
+                                $(this).html(title);
+                            }
+                            else if ($(this).hasClass("pictureDescription")) {
+                                $(this).html(description);
+                            }
+
+                        });
+
+                        isFirst = false;
+                    }
+                }
+            });
+            
 
 
             // setup navDots
@@ -271,17 +273,17 @@ var loadedPictures = 0;
     
     window.onload = (event) => {
 
-        totalPictures = $('img').length
+        totalPictures = $('img').length + $('iframe').length
 
         $('img').each(function() {
             if (this.complete) {
                 // If the image is already loaded (cached), handle it immediately
-                console.log("picture loaded (cached)!");
+                //console.log("picture loaded (cached)!");
                 loadedPictures += 1;
             } else {
                 // Attach the load event for images that aren't loaded yet
                 $(this).on("load", function() {
-                    console.log("picture loaded!");
+                    //console.log("picture loaded!");
 
                     loadedPictures += 1;
 
@@ -290,6 +292,23 @@ var loadedPictures = 0;
                     }
                 });
             }
+        });
+        
+        $('iframe').each(function() {
+            let url = $(this).data('src');
+            
+            // Attach the load event for iframes
+            $(this).on("load", function() {
+                console.log("Iframe has finished loading!");
+                loadedPictures += 1;
+
+                if (loadedPictures >= totalPictures) {
+                    setMaxPictureWidths();
+                }
+            });
+
+            this.src = url;
+            
         });
 
         if (loadedPictures >= totalPictures) {
