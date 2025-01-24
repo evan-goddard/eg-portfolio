@@ -1057,6 +1057,8 @@ input, select, textarea {
 
 		@media screen and (max-width: 980px) {
 
+
+
 			.row {
 				display: flex;
 				flex-wrap: wrap;
@@ -4999,6 +5001,8 @@ input, select, textarea {
 		padding: 0 10rem 0 10rem;
 	}
 
+	
+
 	#content {
 		margin-top: 50px;
 		padding: 0;
@@ -5017,6 +5021,29 @@ input, select, textarea {
 		margin-right: 3em;
 		border-radius: 0.5em;
 		min-width: 22em;
+	}
+
+	@media screen and (max-width: 980px) {
+
+		#main.maxWidth {
+			padding: 0 1rem 0 1rem;
+		}
+
+		.timeline {
+			margin: 1em auto;
+		}
+
+	}
+
+	@media screen and (max-width: 500px) {
+
+		#main.maxWidth {
+			padding: 0 0rem 0 0rem;
+		}
+
+		.timeline {
+			margin: 0.1em auto;
+		}
 	}
 
 	p.left {
@@ -5065,6 +5092,7 @@ input, select, textarea {
 		font-weight: 100;
 		font-size: 0.9rem;
 		margin: 0 0 0 0;
+		text-align: left;
 	}
 	
 	.timeline .event:after {
@@ -5086,6 +5114,34 @@ input, select, textarea {
 		cursor: pointer;
 		font-size: 2em;
 		margin: 0.5rem 0 0.25rem 0;
+	}
+
+	.timelineHeader {
+		margin: 1rem 0 0.75rem 0;
+	}
+
+	@media screen and (max-width: 980px) {
+
+		.timelineHeader {
+			font-size: 2rem;
+		}
+
+		.member-title {
+			font-size: 1.5rem;
+		}
+
+	}
+
+	@media screen and (max-width: 360px) {
+
+		.timelineHeader {
+			font-size: 1.85rem;
+		}
+
+		.sub-title > p {
+			font-size: 0.75rem;
+		}
+
 	}
 
 	svg.timelineMarker {
@@ -5276,6 +5332,8 @@ input, select, textarea {
 		padding: 0px;
 	}
 
+	
+
 	.leftZero {
 		left: -3rem;
 	}
@@ -5288,8 +5346,48 @@ input, select, textarea {
 		box-shadow: inset 0 0 0 0px transparent;
 		background: #ffffffa1 !important;
 		color: black !important;
-		font-size: 2rem;
+		font-size: 2.25rem;
 		font-weight: bold;
+	}
+
+	@media screen and (max-width: 980px) {
+
+		.pictureViewer {
+			padding: 1rem;
+		}
+		
+		.pictureNavBtn {
+			width: 2rem;
+		}
+
+		.rightZero {
+			right: -2rem;
+		}
+
+		.leftZero {
+			left: -2rem;
+		}
+
+	}
+
+	@media screen and (max-width: 360px) {
+
+		.pictureViewer {
+			padding: 0rem;
+		}
+		
+		.pictureNavBtn {
+			width: 2rem;
+		}
+
+		.rightZero {
+			right: -2rem;
+		}
+
+		.leftZero {
+			left: -2rem;
+		}
+
 	}
 
 	.viewerPicture {
