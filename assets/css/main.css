@@ -3567,6 +3567,7 @@ input, select, textarea {
 			font-size: 5rem;
 		}
 
+
 		#my-name-right {
 			display: -moz-flex;
 			display: -webkit-flex;
@@ -3703,7 +3704,7 @@ input, select, textarea {
 			}
 
 				#intro h1 {
-					font-size: 3.25rem;
+					font-size: 2.5rem;
 					line-height: 1.1;
 					margin-bottom: 1rem;
 				}
