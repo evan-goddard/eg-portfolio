@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Evan Goddard - Voly</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Img Viewer -->
+		<div class="imgViewer">
+			<img class="imgViewerImage" src=""></img>
+			<!--canvas class="imgViewerCanvas"></canvas-->
+			<button class="closeImgViewerBtn">x</button>
+		</div>
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">EVAN GODDARD</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li class="active">
+								<a href="projects.html">Projects ▼</a>
+								<ul class="dropdown">
+									<li class="active"><a href="Voly.html">Voly</a></li>
+								</ul>
+							</li>
+							<li><a href="professionalexperience.html">Professional Experience</a></li>
+							<li><a href="personalexperience.html">Personal Experience</a></li>
+                            <li><a href="aboutme.html">About Me</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/evan-goddard-734448180/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://www.facebook.com/evan.goddard.9/" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.instagram.com/evan_m_goddard/"  target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<div>
+							<h1 class="projectTitle">Voly</h1>
+							<div class="projectDescDiv">
+								<h3 class="projectDesc">Volume Controller</h3>
+								<button id="scrollFrom">Go to Download</button>
+							</div>
+						</div>
+
+						<div class="centerItemsDiv">
+							<p>Voly is a Windows Presentation Foundation (WPF) C# application that I have created in my free time. Its main purpose is to allow the user to easily change the volume of their applications, input devices, and output devices.
+								There are plans to create a physical device that can be used alongside Voly for even easier control!
+							</p>
+							<p>I'm planning to release Voly for free and potentially have it as open source. However, There's a few things I need to finish up before I fully release it.</p>
+							<video class="webmVideo75" loop muted playsinline preload="metadata" data-autoplay>
+								<source src="videos/Voly/initial.webm" type="video/webm"> 
+							</video>
+						</div>
+
+						<div class="member-content">
+							<div>
+								<h3 class="featureListHeader">Feature List</h3>
+								<ul>
+									<li>Practical Audio Control
+										<ul>
+											<li>Full control over each application, input device, and output device's audio levels and mute status. All of which are controllable via manual input or by hotkeys.</li>
+											<li>Custom Voly items make it even easier to control audio:
+												<ul>
+													<li>Fullscreen Application(s) - Controls the audio and mute status of any fullscreen audio source</li>
+													<li>Audio Groups - Users can set up their own custom "Audio Groups" which allow them to control multiple audio sources at one time.</li>
+												</ul>
+											</li>
+											
+										</ul>
+									</li>
+									<li>Customizable System Hotkeys
+										<ul>
+											<li>Hotkeys are system wide, meaning that Voly does not need to be in focus to use them. Each hotkey is customizable so that each user can setup their ideal usage.</li>
+											<li>Activating a hotkey displays a notification to show the user their changes.</li>
+										</ul>
+									</li>
+									<li>WPF Control Animations
+										<ul>
+											<li>All controls in Voly implement my custom code for animations which is used when controls are hovered, clicked, or toggled. It even allows for animating between two different gradients!</li>
+										</ul>
+									</li>
+									<li>User Color Schemes
+										<ul>
+											<li>The colors within Voly are fully customizable and can be edited without having to close and reopen the application.</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="horizontalPaddingDiv">
+
+							<h2>Main Overview</h2>
+							<div class="pictureViewer" data-selectedindex="0">
+								<!-- doing this because no 'data' attributes are working for me -->
+								<div class="dataDiv">0</div>
+								<h2 class="pictureTitle"></h2>
+								<div class="pictureHolder">
+									<button class="pictureNavBtn leftZero">&lt;</button>
+									
+									<div class="viewerPicture">
+										<div class="dataTitle">Manager View</div>
+										<video class="webmVideo" loop muted playsinline preload="metadata" data-autoplay>
+											<source src="videos/Voly/main_screen.webm" type="video/webm"> 
+										</video>
+										<div class="dataDescription">This is the main view of Voly, which I call a "Volume Manager". You can have multiple managers and each one could be controlled by a separate physical device. Each manager contains a number of 
+											"Volume Editors", which can have any Application, Output / Input Device, or Voly specific item dragged and dropped onto them. 
+										</div>
+									</div>
+									<div class="viewerPicture">
+										<div class="dataTitle">Audio Control</div>
+										<video class="webmVideo" loop muted playsinline preload="metadata" data-autoplay>
+											<source src="videos/Voly/volume_and_mute_changes.webm" type="video/webm"> 
+										</video>
+										<div class="dataDescription">These Volume Editors can be controlled manually or through system wide hotkeys. These hotkeys can be changed and are set in the settings menu. When the audio or mute status of a Volume Editor is set,
+											it will update the audio or mute status of the object in the Windows Volume Mixer and vice versa.<br></br>See more on hotkeys below.
+										</div>
+									</div>
+									<div class="viewerPicture">
+										<div class="dataTitle">Active Border</div>
+										<video class="webmVideo" loop muted playsinline preload="metadata" data-autoplay>
+											<source src="videos/Voly/active_border.webm" type="video/webm"> 
+										</video>
+										<div class="dataDescription">The "Active Border" (red border behind Volume Editors) determines which volume editors will be affected by the hotkeys. It can be moved by dragging, button clicks, and hotkeys. The Active Border was done 
+											so that the user doesn't need to have a hotkey for every single Volume Editor. In this example, I'm using the same hotkey for every volume change.<br></br>The Active Border can cover a variable amount of Volume Editors, 
+											maxing out at 15 and having a minimum of 2. The hotkey notification for moving the Active Border automatically changes based on the current size of the Active Border.<br></br>PLANNED: Once a physical device is connected 
+											and linked to a manager, the Active Border size on that manager will instead be determined by how many knobs are currently on the physical device.
+										</div>
+									</div>
+
+									<button class="pictureNavBtn rightZero">&gt;</button>
+								</div>
+								<p class="pictureDescription"></p>
+								<div class="divGraphicDivider"></div>
+							</div>
+
+							<h2>Hotkeys</h2>
+							<div class="pictureViewer" data-selectedindex="0">
+								<!-- doing this because no 'data' attributes are working for me -->
+								<div class="dataDiv">0</div>
+								<h2 class="pictureTitle"></h2>
+								<div class="pictureHolder">
+									<button class="pictureNavBtn leftZero">&lt;</button>
+									<div class="viewerPicture">
+										<div class="dataTitle">Overview</div>
+										<video class="webmVideo" loop muted playsinline preload="metadata" data-autoplay>
+											<source src="videos/Voly/hotkey_demo.webm" type="video/webm"> 
+										</video>
+										<div class="dataDescription">Hotkeys change Volume Editors based off the location of the "Active Border" (red rectangle behind Volume Editors). This was done so that a user didn't need a large amount of hotkeys to control
+											everything that they wanted to. A user can move this Active Border at any time to change which Volume Editors are currently being targeted by the hotkeys.<br></br>
+											Hotkeys display a notification in the bottom right corner of the screen when they are actived (shown on top of application in this example for ease of viewing).
+										</div>
+									</div>
+									<div class="viewerPicture">
+										<div class="dataTitle">Hotkey Notifications</div>
+										<video class="webmVideo" loop muted playsinline preload="metadata" data-autoplay>
+											<source src="videos/Voly/hotkey_notifications.mp4" type="video/mp4"> <!-- Leaving as mp4, converting this clip to webm was flickering the Muted text and symbol to Unmuted very briefly, no clue why -->
+										</video>
+										<div class="dataDescription">A closer look at Voly's hotkey notifications. 
+										</div>
+									</div>
+									<div class="viewerPicture">
+										<div class="dataTitle">Hotkey Settings</div>
+										<video class="webmVideo" loop muted playsinline preload="metadata" data-autoplay>
+											<source src="videos/Voly/hotkey_settings.webm" type="video/webm"> <!-- Leaving as mp4, converting this clip to webm was flickering the Muted text and symbol to Unmuted very briefly, no clue why -->
+										</video>
+										<div class="dataDescription">Hotkeys can be edited through the settings menu. Currently, a user can edit the hotkeys for changing the volume, muting, and moving the active border.
+										</div>
+									</div>
+
+									<button class="pictureNavBtn rightZero">&gt;</button>
+								</div>
+								<p class="pictureDescription"></p>
+								<div class="divGraphicDivider"></div>
+							</div>
+
+						</div>
+
+						<div class="centerItemsDiv" id="scrollTo">
+							<p>This page is still a work in progress, so please <a class="aOrangeLink" href="downloads/Voly 0.3.7.zip">download</a> and try out Voly to see all it has to offer!<br></br>DISCLAIMER: Since I do not have a Code Signing Certificate yet, Windows will believe Voly is not safe and it will try 
+							to stop it from downloading and running normally. Also, I do not have the Github repo publicly listed since I'm not quite ready to do so. If you want more information, feel free to ask!</p>
+						</div>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<div class="footerNavWrapper">
+								<ul class="footerNav">
+									<li><a href="index.html">HOME</a></li>
+									<li><a href="projects.html">PROJECTS</a></li>
+									<li><a href="professionalexperience.html">PROFESSIONAL EXPERIENCE</a></li>
+									<li><a href="personalexperience.html">PERSONAL EXPERIENCE</a></li>
+									<li><a href="aboutme.html">ABOUT ME</a></li>
+								</ul>
+							</div>
+						</section>
+						<section class="split contact">
+							<section>
+								<h4>Email</h4>
+								<p>evanmgoddard@gmail.com</p>
+							</section>
+							<section>
+								<h4>Social</h4>
+								<ul class="icons alt">
+									<li><a href="https://www.linkedin.com/in/evan-goddard-734448180/" target="_blank" class="icon brands alt fa-linkedin"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.facebook.com/evan.goddard.9/" target="_blank" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/evan_m_goddard/" target="_blank" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								</ul>
+							</section>
+							<section>
+								<h4>Resume</h4>
+								<a class="aOrangeLink" href="pdfs/Evan Goddard Resume.pdf" target="_blank">pdf</a>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<!--div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div-->
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<!-- Place above timeline, or else picture viewer will be collapsed and unable to read initial height properly -->
+			<script src="assets/js/pictureViewer.js"></script>
+			<script src="assets/js/timeline.js"></script>
+
+	</body>
+</html>

@@ -335,4 +335,51 @@
 		//#endregion
 
 
+		// Only play videos when the video is within view of the user
+		const options = {
+			root: null,
+			rootMargin: "0px",
+			threshold: 0.5, // 50% in view
+		};
+
+		const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			const video = entry.target;
+			const $video = $(video); // Wrap in jQuery
+			const $parent = $video.parent(); // Get parent
+
+			
+
+			if ($parent.hasClass('viewerPicture')) {
+				if (entry.isIntersecting && $parent.hasClass('active')) {
+					video.play();
+				}
+				else {
+					video.pause();
+				}
+			}
+			else {
+				if (entry.isIntersecting) {
+					video.play();
+				}
+				else {
+					video.pause();
+				}
+			}
+			
+		});
+		}, options);
+
+		// video element must have "data-autoplay" attribute for this to apply
+		document.querySelectorAll("video[data-autoplay]").forEach(video => {
+			observer.observe(video);
+		});
+
+
+		// should clean this up later, just need basic interaction behavior right now
+		document.getElementById('scrollFrom').addEventListener('click', function () {
+			document.getElementById('scrollTo').scrollIntoView({ behavior: 'smooth' });
+		});
+
+
 })(jQuery);

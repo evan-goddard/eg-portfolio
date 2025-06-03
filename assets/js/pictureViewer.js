@@ -6,6 +6,25 @@ var loadedPictures = 0;
 
 (function($) {
 
+    // Only play videos when the video is within view of the user
+    const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5, // 50% in view
+    };
+
+    const observer = new IntersectionObserver((entry) => {
+    
+        const video = entry[0].target;
+
+        if (entry[0].isIntersecting) {
+            video.play();
+        }
+        else {
+            video.pause();
+        }
+        
+    }, options);
     
 
 	$.fn._changePicture = function(leftOrRight, specificIndex) {
@@ -100,8 +119,25 @@ var loadedPictures = 0;
         curPicture.removeClass("active");
         curNavDot.removeClass("active");
 
+        observer.disconnect();
+
+        curPicture.children().each(function() {
+            if ($(this).hasClass("webmVideo")) {
+                $(this).get(0).pause();
+                $(this).get(0).currentTime = 0; // play from beginning the next time we view it
+            }
+        });
+
+
         newPicture.addClass("active");
         newNavDot.addClass("active");
+
+        newPicture.children().each(function() {
+            if ($(this).hasClass("webmVideo")) {
+                //$(this).get(0).play();
+                observer.observe($(this).get(0)); // handles playing
+            }
+        });
 
         // just set html, user spamming the navigation buttons would break these when I was attempting to fade them out, change them, then fade them back in
         pictureTitle.html(title);
@@ -265,6 +301,12 @@ var loadedPictures = 0;
                 if (i == 0) {
                     navDot.addClass("active");;
                 }
+
+                navDot.click(function (e) {
+
+                    $(this).closest(".pictureViewer")._changePicture("", parseInt($(this).html()));
+
+                });
             }
 
         });
@@ -352,14 +394,6 @@ var loadedPictures = 0;
             $('body').css("overflow", "");
         });
     });
-
-    // change pictures on navDot click
-    $('.navDot').click(function (e) {
-
-        $(this).closest(".pictureViewer")._changePicture("", parseInt($(this).html()));
-
-    });
-
 
 
     /**************************************************************

@@ -159,7 +159,6 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-		border-bottom: dotted 1px;
 		text-decoration: none;
 	}
 
@@ -3849,7 +3848,7 @@ input, select, textarea {
 		height: 4rem;
 		line-height: 4rem;
 		margin: -4rem auto 0 auto;
-		overflow: hidden;
+		overflow: visible;
 		padding: 0 2rem 0 0;
 		position: relative;
 		width: calc(100% - 4rem);
@@ -3879,7 +3878,6 @@ input, select, textarea {
 
 		#nav a {
 			color: #ffffff;
-			border-bottom-color: rgba(255, 255, 255, 0.5);
 		}
 
 			#nav a:hover {
@@ -3908,6 +3906,7 @@ input, select, textarea {
 			border-bottom-color: #ffffff;
 		}
 
+
 		#nav ul.links {
 			display: -moz-flex;
 			display: -webkit-flex;
@@ -3933,6 +3932,7 @@ input, select, textarea {
 			#nav ul.links li {
 				display: block;
 				padding-left: 0;
+				position: relative;
 			}
 
 				#nav ul.links li a {
@@ -3955,13 +3955,38 @@ input, select, textarea {
 					background-color: #ffffff;
 				}
 
-					#nav ul.links li.active a {
+					#nav ul.links li.active a,
+					#nav ul.links li .dropdown li.active a {
 						color: #1e252d;
 					}
 
 						#nav ul.links li.active a:hover {
 							color: #be9d91 !important;
 						}
+
+				#nav ul.links li .dropdown {
+					display: none;
+					position: absolute;
+					top: 100%;
+					left: 0;
+					background: #464b52;
+					border: 1px solid black;
+					list-style: none;
+					padding: 0;
+					margin: 0px 0px 0px -1px;
+					z-index: 1000;
+					min-width: 180px;
+					}
+
+					#nav ul.links li .dropdown a {
+						color: #ffffff;
+					}
+					
+
+				#nav ul.links li:hover .dropdown,
+				#nav ul.links li .dropdown:hover {
+					display: block;
+				}
 
 		#nav ul.icons {
 			-moz-flex-grow: 0;
@@ -3983,6 +4008,11 @@ input, select, textarea {
 
 		}
 
+		
+		
+		
+
+
 /* Main */
 
 	#main {
@@ -3991,7 +4021,7 @@ input, select, textarea {
 		margin: 0 auto;
 		width: calc(100% - 2rem);
 		max-width: 72rem;
-		z-index: 2;
+		/*z-index: 2;*/
 	}
 
 		#main > * {
@@ -4111,10 +4141,16 @@ input, select, textarea {
 					border-top-width: 0;
 				}
 
-				#main > .posts > article:last-child:nth-child(odd)  {
+				#main > .posts > article:last-child:nth-child(odd) {
 					margin-left: auto;
 					margin-right: auto;
 				}
+
+				#main > .posts > article:nth-last-child(1),
+				#main > .posts > article:nth-last-child(2):nth-child(odd) {
+					border-bottom-width: 2px;
+				}
+
 
 			@media screen and (max-width: 980px) {
 
@@ -4154,6 +4190,10 @@ input, select, textarea {
 
 				#main > .posts > article:nth-child(-n + 1) {
 					border-top-width: 0;
+				}
+
+				#main > .posts > article:nth-last-child(2):nth-child(odd) {
+					border-bottom-width: 0px;
 				}
 
 				#main > .posts > article .image {
@@ -4865,6 +4905,10 @@ input, select, textarea {
 					text-transform: uppercase;
 				}
 
+				#navPanel .links li .dropdown a {
+					padding: 0.25rem 0;
+				}
+
 				#navPanel .links li:first-child {
 					border-top: 0;
 				}
@@ -5217,6 +5261,9 @@ input, select, textarea {
 		margin: 0.25rem 0 0 0;
 	}
 
+	
+
+
 	.follow,
 	.options {
 		width: 30px;
@@ -5275,6 +5322,36 @@ input, select, textarea {
 		margin-left: 6px;
 	}
 
+
+	/* Projects */
+	.projectTitle {
+		margin: 0 0 0.5rem 0;
+	}
+
+	.projectDescDiv {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-moz-justify-content: flex-start;
+		-webkit-justify-content: flex-start;
+		-ms-justify-content: flex-start;
+		justify-content: space-between;
+	}
+
+	.projectDescDiv > h3 {
+		font-style: italic;
+		margin: 0 0 1rem 3rem;
+		color: #adadad
+	}
+
+	.projectDescDiv > button {
+		margin: 0 0 1rem 3rem;
+	}
 
 	/* Picture Viewer */
 
@@ -5606,4 +5683,62 @@ input, select, textarea {
 		height: 0.2rem;
 		width: 100%;
 		margin: 1rem 0 1rem 0;
+	}
+
+
+
+	.centerItemsDiv {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-direction: column;
+		-webkit-flex-directions: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		-moz-justify-content: center;
+		-webkit-justify-content: center;
+		-ms-justify-content: center;
+		justify-content: center;
+	}
+
+
+	.webmVideo {
+		position: relative;
+		object-fit: contain;
+		width: 100%
+	}
+
+	.webmVideo75 {
+		position: relative;
+		object-fit: contain;
+		width: 75%
+	}
+
+	.horizontalPaddingDiv {
+		padding-left: 0rem !important;
+		padding-right: 0rem !important;
+	}
+
+	@media screen and (max-height: 1000px) {
+
+		.horizontalPaddingDiv {
+			padding-left: 8rem !important;
+			padding-right: 8rem !important;
+		}
+
+	}
+
+	@media screen and (max-width: 980px) {
+
+		.webmVideo75 {
+			position: relative;
+			object-fit: contain;
+			width: 100%
+		}
+
 	}
