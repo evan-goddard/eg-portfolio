@@ -5720,15 +5720,15 @@ input, select, textarea {
 	}
 
 	.horizontalPaddingDiv {
-		padding-left: 0rem !important;
-		padding-right: 0rem !important;
+		padding-left: 0rem;
+		padding-right: 0rem;
 	}
 
 	@media screen and (max-height: 1000px) {
 
 		.horizontalPaddingDiv {
-			padding-left: 8rem !important;
-			padding-right: 8rem !important;
+			padding-left: 8rem;
+			padding-right: 8rem;
 		}
 
 	}

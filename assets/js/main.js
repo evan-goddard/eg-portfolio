@@ -377,9 +377,13 @@
 
 
 		// should clean this up later, just need basic interaction behavior right now
-		document.getElementById('scrollFrom').addEventListener('click', function () {
+		let scrollFrom = document.getElementById('scrollFrom');
+
+		if (scrollFrom != null) {
+			scrollFrom.addEventListener('click', function () {
 			document.getElementById('scrollTo').scrollIntoView({ behavior: 'smooth' });
 		});
+		}
 
 
 })(jQuery);

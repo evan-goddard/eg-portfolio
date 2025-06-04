@@ -205,11 +205,19 @@ var loadedPictures = 0;
             holder.children().each(function() {
                 if ($(this).hasClass("viewerPicture")) {
                     $(this).children().each(function() {
-                        if (this.nodeName == "IMG" || this.nodeName == "IFRAME") {
+                        if (this.nodeName == "IMG" || this.nodeName == "IFRAME" || this.nodeName == "VIDEO") {
+
+                            let height = 0;
+
+                            if (this.nodeName == "VIDEO") {
+                                height = this.videoHeight;
+                            } else {
+                                height = this.height;
+                            }
+
                             //  find picture with largest height
-                            if (this.height > heightOfPicture) {
-                                //largestPicture = $(this).attr("src");
-                                heightOfPicture = this.height;
+                            if (height > heightOfPicture) {
+                                heightOfPicture = height;
                             }
                         }
                     });
@@ -233,11 +241,20 @@ var loadedPictures = 0;
                     }
                     else {
                         $(this).children().each(function() {
-                            if (this.nodeName == "IMG" || this.nodeName == "IFRAME") {
+                            if (this.nodeName == "IMG" || this.nodeName == "IFRAME" || this.nodeName == "VIDEO") {
+
+                                let height = 0;
+
+                                if (this.nodeName == "VIDEO") {
+                                    height = this.videoHeight;
+                                } else {
+                                    height = this.height;
+                                }
+
                                 //  set largest to relative positioning so that they we maintain dynamic resizing
-                                if (this.height == heightOfPicture  && !setRelative) {
+                                if (height == heightOfPicture  && !setRelative) {
                                     viewer.css("position", "relative");
-                                    setRelative = true // what if two or more pictures have the same height and are the largest?
+                                    setRelative = true // what if two or more pictures have the same height and are the largest? this should maintain that only one should be 'absolute' positioning
                                 }
                             }
                         });
@@ -320,12 +337,12 @@ var loadedPictures = 0;
         $('img').each(function() {
             if (this.complete) {
                 // If the image is already loaded (cached), handle it immediately
-                //console.log("picture loaded (cached)!");
+                console.log("picture loaded (cached)!");
                 loadedPictures += 1;
             } else {
                 // Attach the load event for images that aren't loaded yet
                 $(this).on("load", function() {
-                    //console.log("picture loaded!");
+                    console.log("picture loaded!");
 
                     loadedPictures += 1;
 
@@ -339,15 +356,20 @@ var loadedPictures = 0;
         $('iframe').each(function() {
             let url = $(this).data('src');
             
-            // Attach the load event for iframes
-            $(this).on("load", function() {
-                console.log("Iframe has finished loading!");
+            if (this.complete) {
+                console.log("iframe loaded (cached)!");
                 loadedPictures += 1;
+            } else {
+                // Attach the load event for iframes
+                $(this).on("load", function() {
+                    console.log("Iframe has finished loading!");
+                    loadedPictures += 1;
 
-                if (loadedPictures >= totalPictures) {
-                    setMaxPictureWidths();
-                }
-            });
+                    if (loadedPictures >= totalPictures) {
+                        setMaxPictureWidths();
+                    }
+                });
+            }
 
             this.src = url;
             
