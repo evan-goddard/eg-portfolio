@@ -30,7 +30,7 @@ var loadedPictures = 0;
 	$.fn._changePicture = function(leftOrRight, specificIndex) {
 
         if (leftOrRight != "left" && leftOrRight != "right" && specificIndex == -1) {
-            console.log("PICTURE VIEWER ERROR! _changePicture() parameter is not set to 'left' or 'right'. Value: " + leftOrRight);
+            console.log("PICTURE VIEWER ERROR! _changePicture() parameter is not set to 'left' or 'right' and a specificIndex has not been specified. Value: " + leftOrRight);
             return;
         }
 
@@ -106,7 +106,7 @@ var loadedPictures = 0;
         var title = "";
         var description = "";
 
-        // get new active title and description
+        // get new active title and description, newPicture is a viewerPicture class div
         newPicture.children().each(function() {
             if ($(this).hasClass("dataTitle")) {
                 title = $(this).html();

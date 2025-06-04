@@ -6,6 +6,17 @@
 
 (function($) {
 
+	function isMobileDevice() {
+		return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+	}
+
+	if (isMobileDevice()) {
+		document.querySelectorAll('.desktopOnly').forEach(el => el.remove());
+	}
+	else {
+		document.querySelectorAll('.mobileOnly').forEach(el => el.remove());
+	}
+
 	var	$window = $(window),
 		$body = $('body'),
 		$wrapper = $('#wrapper'),
@@ -384,6 +395,5 @@
 			document.getElementById('scrollTo').scrollIntoView({ behavior: 'smooth' });
 		});
 		}
-
 
 })(jQuery);
